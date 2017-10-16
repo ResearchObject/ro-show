@@ -1,4 +1,4 @@
-package roshow.storage;
+package org.researchobject.roshow.storage;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

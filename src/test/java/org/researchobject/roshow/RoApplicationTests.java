@@ -1,4 +1,4 @@
-package roshow;
+package org.researchobject.roshow;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

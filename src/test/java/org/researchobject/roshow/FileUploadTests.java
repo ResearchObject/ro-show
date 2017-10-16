@@ -1,4 +1,4 @@
-package roshow;
+package org.researchobject.roshow;
 
 import java.nio.file.Paths;
 import java.util.stream.Stream;
@@ -7,6 +7,7 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import org.researchobject.roshow.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,8 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import roshow.storage.StorageFileNotFoundException;
-import roshow.storage.StorageService;
+import org.researchobject.roshow.storage.StorageFileNotFoundException;
 
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package roshow.storage;
+package org.researchobject.roshow.storage;
 
 import java.util.Random;
 
