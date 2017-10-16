@@ -1,4 +1,4 @@
-package roshow.storage;
+package org.researchobject.roshow.storage;
 
 public class StorageFileNotFoundException extends StorageException {
 

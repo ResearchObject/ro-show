@@ -1,13 +1,12 @@
-package roshow.storage;
+package org.researchobject.roshow.storage;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.net.MalformedURLException;import java.nio.file.*;
+import java.time.LocalDate;
+import java.util.UUID;
 import java.util.stream.Stream;
 
+import org.researchobject.roshow.model.UUIDdb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -26,6 +25,12 @@ public class FileSystemStorageService implements StorageService {
         this.rootLocation = Paths.get(properties.getLocation());
     }
 
+    @Autowired
+    UUIDrepository uuiDrepository;
+
+    private UUIDutility uuiDutility = new UUIDutility();
+
+
     @Override
     public void store(MultipartFile file) {
         String filename = StringUtils.cleanPath(file.getOriginalFilename());
@@ -40,12 +45,17 @@ public class FileSystemStorageService implements StorageService {
                                 + filename);
             }
             if (filename.endsWith(".zip")) {
+//                UUID uuid = uuiDutility.createAndCheckUUIDexists();
+//                uuiDrepository.save(new UUIDdb(uuid, LocalDate.now()));
+                UUID uuid = UUID.randomUUID();
+                uuiDrepository.save(new UUIDdb(uuid, LocalDate.now()));
+
+                filename = uuid.toString() + ".zip";
                 Files.copy(file.getInputStream(), this.rootLocation.resolve(filename),
                         StandardCopyOption.REPLACE_EXISTING);
 
-                UnzipUtility unzipUtility = new UnzipUtility();
-                unzipUtility.unzip(this.rootLocation.resolve(filename), rootLocation.toString().concat("/" + filename.replace(".zip", "")));
-
+                Unzipper unzipper = new Unzipper();
+                unzipper.unzip(this.rootLocation.resolve(filename), this.rootLocation.resolve(uuid.toString()));
             }
             else {
                 Files.copy(file.getInputStream(), this.rootLocation.resolve(filename),
