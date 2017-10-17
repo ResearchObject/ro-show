@@ -2,11 +2,13 @@ package org.researchobject.roshow.storage;
 
 import java.io.IOException;
 import java.net.MalformedURLException;import java.nio.file.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 import java.util.stream.Stream;
 
 import org.researchobject.roshow.model.UUIDdb;
+import org.researchobject.roshow.repository.UUIDrepository;
+import org.researchobject.roshow.service.Unzipper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -28,8 +30,11 @@ public class FileSystemStorageService implements StorageService {
     @Autowired
     UUIDrepository uuiDrepository;
 
-    private UUIDutility uuiDutility = new UUIDutility();
 
+    private static String getCurrentLocalTime() {
+        LocalDateTime time = LocalDateTime.now();
+        return time.toString();
+    }
 
     @Override
     public void store(MultipartFile file) {
@@ -45,10 +50,8 @@ public class FileSystemStorageService implements StorageService {
                                 + filename);
             }
             if (filename.endsWith(".zip")) {
-//                UUID uuid = uuiDutility.createAndCheckUUIDexists();
-//                uuiDrepository.save(new UUIDdb(uuid, LocalDate.now()));
                 UUID uuid = UUID.randomUUID();
-                uuiDrepository.save(new UUIDdb(uuid, LocalDate.now()));
+                uuiDrepository.save(new UUIDdb(uuid, getCurrentLocalTime()));
 
                 filename = uuid.toString() + ".zip";
                 Files.copy(file.getInputStream(), this.rootLocation.resolve(filename),
