@@ -3,6 +3,8 @@ package org.researchobject.roshow.storage;
 import java.io.IOException;
 import java.net.MalformedURLException;import java.nio.file.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 import java.util.stream.Stream;
 
@@ -121,4 +123,16 @@ public class FileSystemStorageService implements StorageService {
             throw new StorageException("Could not initialize storage", e);
         }
     }
+
+    @Override
+    public List<UUIDdb> getUUIDdbList() {
+        List<UUIDdb> uuiDdbList = new ArrayList<>();
+        uuiDrepository.findAll();
+        for (UUIDdb uuiDdb : uuiDrepository.findAll()) {
+            uuiDdbList.add(uuiDdb);
+        }
+        return uuiDdbList;
+    }
+
+
 }
