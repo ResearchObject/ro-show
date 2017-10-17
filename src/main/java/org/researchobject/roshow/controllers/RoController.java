@@ -1,13 +1,20 @@
 package org.researchobject.roshow.controllers;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
+import org.researchobject.roshow.model.UUIDdb;
 import org.researchobject.roshow.storage.StorageFileNotFoundException;
 import org.researchobject.roshow.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,6 +47,14 @@ public class RoController {
                         "serveFile", path.getFileName().toString()).build().toString())
                 .collect(Collectors.toList()));
 
+
+        List<UUIDdb> list = storageService.getUUIDdbList();
+        List<UUID> uuidList = new ArrayList<>();
+        for (UUIDdb uuiDdb : list) {
+            uuidList.add(uuiDdb.getUuid());
+        }
+
+        model.addAttribute("manifests", uuidList);
         return "uploadForm";
     }
 
@@ -52,16 +67,15 @@ public class RoController {
                 "attachment; filename=\"" + file.getFilename() + "\"").body(file);
     }
 
-//    @GetMapping("/")
-//    public String listAllSubfiles(Model model) throws IOException {
-//
-//        model.addAttribute("files", storageService.loadAll().map(
-//                path -> MvcUriComponentsBuilder.fromMethodName(RoController.class,
-//                        "serveFile", path.getFileName().toString()).build().toString())
-//                .collect(Collectors.toList()));
-//
-//        return "uploadForm";
-//    }
+
+    @GetMapping("/displayManifest")
+    public ResponseEntity<List<String>> displayManifest(@RequestParam UUID manifest) throws IOException{
+        File file = new File(storageService.load(manifest.toString()).toString().concat("/.ro/manifest.json"));
+        return ResponseEntity
+                .ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(Files.readAllLines(file.toPath()));
+    }
 
     @PostMapping("/")
     public String handleFileUpload(@RequestParam("file") MultipartFile file,

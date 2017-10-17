@@ -22,13 +22,15 @@
     </ul>
 </div>
 
-<a href="/file/manifest/download">
-    <button>Download manifest file</button>
-</a>
+<div>
+    <ul>
+        <li th:each="manifest : ${manifests}">
+            <a th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}">
+            </a>
+        </li>
+    </ul>
+</div>
 
-<a href="/file/manifest/display">
-    <button>Display manifest file</button>
-</a>
 
 </body>
 </html>
