@@ -3,12 +3,11 @@ package org.researchobject.roshow.controllers;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import org.researchobject.roshow.model.UUIDdb;
+import org.researchobject.roshow.service.JsonReader;
 import org.researchobject.roshow.storage.StorageFileNotFoundException;
 import org.researchobject.roshow.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,11 +49,28 @@ public class RoController {
 
         List<UUIDdb> list = storageService.getUUIDdbList();
         List<UUID> uuidList = new ArrayList<>();
+        List<String> manifestList;
+
+        JsonReader jreader;
+        Map<UUID, List> manifestMap = new HashMap<>();
+
         for (UUIDdb uuiDdb : list) {
-            uuidList.add(uuiDdb.getUuid());
+            UUID uuid = uuiDdb.getUuid();
+            uuidList.add(uuid);
+
+            File file = new File(storageService.load(uuiDdb.getUuid().toString()).toString().concat("/.ro/manifest.json"));
+            jreader  = new JsonReader(file);
+
+            manifestList = new ArrayList<>();
+            manifestList.add(jreader.getAuthors());
+            manifestList.add(jreader.getViewer());
+            manifestList.add(jreader.getDateCreated());
+
+            manifestMap.put(uuid, manifestList);
         }
 
         model.addAttribute("manifests", uuidList);
+        model.addAttribute("manifestInfo", manifestMap);
         return "uploadForm";
     }
 
