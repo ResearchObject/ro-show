@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manifest</title>
+</head>
+<body>
+
+
+<li th:each="json : ${jsonDump}">
+    <p th:text="${json}"></p>
+</li>
+
+
+
+</body>
+</html>
