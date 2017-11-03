@@ -1,15 +1,43 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Manifest</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css" media="screen"/>
 </head>
 <body>
 
+<nav th:replace="fragments/header :: navbar"></nav>
 
-<li th:each="json : ${jsonDump}">
-    <p th:text="${json}"></p>
-</li>
+<div class="container">
 
+    <!--
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Sidebar panel widget</h4>
+            </div>
+            <div class="panel-body">
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
 
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Sidebar panel widget</h4>
+            </div>
+            <div class="panel-body">
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>-->
+    <li th:each="json : ${jsonDump}">
+        <p th:text="${json}"></p>
+    </li>
+</div>
+
+<script src="webjars/jquery/2.1.4/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>

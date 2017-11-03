@@ -45,15 +45,15 @@ public class JsonReader {
             for(Object author : authoredBy)
             {
                 if (author instanceof JSONObject){
-                    JSONObject jsonObject1 = (JSONObject)author;
-                    authors = sb.append(jsonObject1.get("name")).append(" | ").toString();
+                    JSONObject jsonObject = (JSONObject)author;
+                    authors = sb.append(jsonObject.get("name")).append(" | ").toString();
                 }
             }
         }
         catch(Exception e){
             e.printStackTrace();
         }
-        return "authoredBy: " + authors;
+        return authors;
     }
 
     public String getViewer() {
@@ -71,7 +71,7 @@ public class JsonReader {
             e.printStackTrace();
         }
 
-        return "profile: " + roProfile + "; viewer: " + recommendedViewer;
+        return roProfile + " (can be viewed by " + recommendedViewer + ")";
     }
 
     public String getDateCreated(){
@@ -85,4 +85,3 @@ public class JsonReader {
         return "createdOn: " + dateCreated;
     }
 }
-

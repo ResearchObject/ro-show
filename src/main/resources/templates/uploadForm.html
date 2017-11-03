@@ -1,36 +1,75 @@
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css"/>
+</head>
 <body>
 
-<div th:if="${message}">
-    <h2 th:text="${message}"/>
+<nav th:replace="fragments/header :: navbar"></nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" role="main" id="main">
+            <h1>Research Object Viewer Tool</h1>
+        </div>
+    </div>
+    <div class="row">
+        <blockquote><p>This is a tool for top level viewing of the resources in a research object and annotations about them. Ro-show is still under development and subject to change without warning!!</p></blockquote>
+    </div>
+
+    <div class="row">
+
+        <form method="POST" enctype="multipart/form-data" action="/">
+
+            <div class="form-group">
+                <label>Zip File Input</label>
+                <input type="file" name="file" id="ZipInputFile"></input>
+                <p class="help-block">Choose a research object zip file to upload</p>
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+
+        </form>
+    </div>
+    <hr/>
+
+    <div class="row">
+
+        <div class="col-sm-8 col-sm-push-4 ">
+            <ul class="list-unstyled  list-group margin-b-3">
+                <li th:each="manifest : ${manifests}">
+                    <em>
+                        <a class="list-group-item" th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}"></a>
+                    </em>
+                    <p>Authors <small th:text="${authorsInfo.get(manifest)}"></small></p>
+                    <p>Profile <small th:text="${profileInfo.get(manifest)}"></small></p>
+                    <p>Date Created <small th:text="${dateCreatedInfo.get(manifest)}"></small></p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-4 col-sm-pull-8">
+            <strong class="content" th:if="${message}">
+                <p th:text="${message}"></p>
+            </strong>
+            <hr/>
+
+            <!-- list group -->
+            <ul class="list-unstyled">
+                <li th:each="file : ${files}">
+                    <em>
+                        <a th:href="${file}" th:text="${file}" />
+                    </em>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 </div>
 
-<div>
-    <form method="POST" enctype="multipart/form-data" action="/">
-        <table>
-            <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
-            <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
-        </table>
-    </form>
-</div>
-
-<div>
-    <ul>
-        <li th:each="file : ${files}">
-            <a th:href="${file}" th:text="${file}" />
-        </li>
-    </ul>
-</div>
-
-<div>
-    <ul>
-        <li th:each="manifest : ${manifests}">
-            <a th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}"></a>
-            <p th:text="${manifestInfo.get(manifest)}"></p>
-        </li>
-    </ul>
-</div>
-
+<div th:replace="fragments/footer :: copy"></div>
 
 </body>
 </html>

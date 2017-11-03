@@ -42,10 +42,15 @@ public class RoController {
 
         List<UUIDdb> list = storageService.getUUIDdbList();
         List<UUID> uuidList = new ArrayList<>();
-        List<String> manifestList;
+        List<String> authorsList;
+        List<String> profileList;
+        List<String> dateCreatedList;
 
         JsonReader jreader;
-        Map<UUID, List> manifestMap = new HashMap<>();
+        Map<UUID, List> authorsMap = new HashMap<>();
+        Map<UUID, List> profileMap = new HashMap<>();
+        Map<UUID, List> dateCreatedMap = new HashMap<>();
+
 
         for (UUIDdb uuiDdb : list) {
             UUID uuid = uuiDdb.getUuid();
@@ -54,16 +59,24 @@ public class RoController {
             File file = new File(storageService.load(uuiDdb.getUuid().toString()).toString().concat("/.ro/manifest.json"));
             jreader = new JsonReader(file);
 
-            manifestList = new ArrayList<>();
-            manifestList.add(jreader.getAuthors());
-            manifestList.add(jreader.getViewer());
-            manifestList.add(jreader.getDateCreated());
+            authorsList = new ArrayList<>();
+            profileList = new ArrayList<>();
+            dateCreatedList = new ArrayList<>();
 
-            manifestMap.put(uuid, manifestList);
+            authorsList.add(jreader.getAuthors());
+            profileList.add(jreader.getViewer());
+            dateCreatedList.add(jreader.getDateCreated());
+
+            authorsMap.put(uuid, authorsList);
+            profileMap.put(uuid, profileList);
+            dateCreatedMap.put(uuid, dateCreatedList);
+
         }
 
         model.addAttribute("manifests", uuidList);
-        model.addAttribute("manifestInfo", manifestMap);
+        model.addAttribute("authorsInfo", authorsMap);
+        model.addAttribute("profileInfo", profileMap);
+        model.addAttribute("dateCreatedInfo", dateCreatedMap);
         return "uploadForm";
     }
 
