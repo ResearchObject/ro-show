@@ -37,20 +37,20 @@
 
     <div class="row">
 
-        <div class="col-sm-8 col-sm-push-4 ">
+        <div class="col-sm-6 col-sm-push-6 ">
             <ul class="list-unstyled  list-group margin-b-3">
                 <li th:each="manifest : ${manifests}">
                     <em>
                         <a class="list-group-item" th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}"></a>
                     </em>
-                    <p>Authors <small th:text="${authorsInfo.get(manifest)}"></small></p>
-                    <p>Profile <small th:text="${profileInfo.get(manifest)}"></small></p>
-                    <p>Date Created <small th:text="${dateCreatedInfo.get(manifest)}"></small></p>
+                    <p><bold>Authors</bold><small th:text="${authorsInfo.get(manifest)}"></small></p>
+                    <p><bold>Profile</bold> <small th:text="${profileInfo.get(manifest)}"></small></p>
+                    <p><bold>Date Created</bold><small th:text="${dateCreatedInfo.get(manifest)}"></small></p>
                 </li>
             </ul>
         </div>
 
-        <div class="col-sm-4 col-sm-pull-8">
+        <div class="col-sm-6 col-sm-pull-6">
             <strong class="content" th:if="${message}">
                 <p th:text="${message}"></p>
             </strong>

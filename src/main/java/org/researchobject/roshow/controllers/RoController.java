@@ -1,7 +1,7 @@
 package org.researchobject.roshow.controllers;
 
 import org.researchobject.roshow.model.UUIDdb;
-import org.researchobject.roshow.service.JsonReader;
+import org.researchobject.roshow.manifest.ManifestJsonReader;
 import org.researchobject.roshow.storage.StorageFileNotFoundException;
 import org.researchobject.roshow.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +46,7 @@ public class RoController {
         List<String> profileList;
         List<String> dateCreatedList;
 
-        JsonReader jreader;
+        ManifestJsonReader jreader;
         Map<UUID, List> authorsMap = new HashMap<>();
         Map<UUID, List> profileMap = new HashMap<>();
         Map<UUID, List> dateCreatedMap = new HashMap<>();
@@ -57,13 +57,12 @@ public class RoController {
             uuidList.add(uuid);
 
             File file = new File(storageService.load(uuiDdb.getUuid().toString()).toString().concat("/.ro/manifest.json"));
-            jreader = new JsonReader(file);
+            jreader = new ManifestJsonReader(file);
 
-            authorsList = new ArrayList<>();
             profileList = new ArrayList<>();
             dateCreatedList = new ArrayList<>();
 
-            authorsList.add(jreader.getAuthors());
+            authorsList = jreader.getAuthors();
             profileList.add(jreader.getViewer());
             dateCreatedList.add(jreader.getDateCreated());
 
