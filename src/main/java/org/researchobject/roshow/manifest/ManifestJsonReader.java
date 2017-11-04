@@ -1,22 +1,24 @@
-package org.researchobject.roshow.service;
+package org.researchobject.roshow.manifest;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class JsonReader {
+public class ManifestJsonReader {
 
     private File file;
     private JSONObject jsonObject;
-    public JsonReader() {
+    public ManifestJsonReader() {
 
     }
 
-    public JsonReader(File file) {
+    public ManifestJsonReader(File file) {
         this.file = file;
         JSONParser jsonParser = new JSONParser();
         try {
@@ -35,10 +37,9 @@ public class JsonReader {
         }
     }
 
-    public String getAuthors() {
-
-        StringBuilder sb = new StringBuilder();
-        String authors = "";
+    public List<String> getAuthors() {
+        List<String> authorsList = new ArrayList<>();
+        String authors = " ";
         try{
             JSONArray authoredBy = (JSONArray) jsonObject.get("authoredBy");
 
@@ -46,14 +47,15 @@ public class JsonReader {
             {
                 if (author instanceof JSONObject){
                     JSONObject jsonObject = (JSONObject)author;
-                    authors = sb.append(jsonObject.get("name")).append(" | ").toString();
+                    authors = (String) jsonObject.get("name");
                 }
+                authorsList.add(authors);
             }
         }
         catch(Exception e){
             e.printStackTrace();
         }
-        return authors;
+        return authorsList;
     }
 
     public String getViewer() {
@@ -75,13 +77,44 @@ public class JsonReader {
     }
 
     public String getDateCreated(){
-        String dateCreated = "";
+        String dateCreated = " ";
         try{
             dateCreated = (String) jsonObject.get("createdOn");
         }
         catch(Exception e){
             e.printStackTrace();
         }
-        return "createdOn: " + dateCreated;
+        return dateCreated;
     }
+
+    public String getRetrievedFrom(){
+        StringBuilder sb = new StringBuilder();
+        String retrievedFr = "retrievedFrom";
+        return retrievedFr;
+    }
+
+    public String getAggregates(){
+        StringBuilder sb = new StringBuilder();
+        String aggregates = "aggregates";
+        return aggregates;
+    }
+
+    public List<String> getAnnotations(){
+        List<String> annotations = new ArrayList<>();
+        String annHolder = "";
+
+        JSONArray annotationsArray = (JSONArray) jsonObject.get("annotations");
+        for(Object annotation : annotationsArray)
+        {
+            if (annotation instanceof JSONObject){
+                StringBuilder sb = new StringBuilder();
+                JSONObject jsonObject = (JSONObject) annotation;
+                annHolder = sb.append(jsonObject.get("uri")).append(" about-> ").append(jsonObject.get("content")).toString();
+            }
+            annotations.add(annHolder);
+        }
+
+        return annotations;
+    }
+
 }
