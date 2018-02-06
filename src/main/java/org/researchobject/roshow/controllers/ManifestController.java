@@ -16,7 +16,6 @@ import java.util.UUID;
 @Controller
 public class ManifestController {
 
-
     private final StorageService storageService;
 
     @Autowired
@@ -30,12 +29,12 @@ public class ManifestController {
 
         ManifestJsonReader jsonReader = new ManifestJsonReader(file);
 
+        /* TODO: replace with manifestFile */
         model.addAttribute("authors", jsonReader.getAuthors());
         model.addAttribute("retrievedFrom", jsonReader.getRetrievedFrom());
         model.addAttribute("annotations", jsonReader.getAnnotations());
         model.addAttribute("aggregates", jsonReader.getAggregates());
         return "display";
-
     }
 
     /* backup method that displays the JSON correctly on screen */

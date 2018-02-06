@@ -1,5 +1,8 @@
 package org.researchobject.roshow.controllers;
 
+import com.github.jsonldjava.core.JsonLdError;
+import org.json.simple.parser.ParseException;
+import org.researchobject.roshow.manifest.ManifestFile;
 import org.researchobject.roshow.model.UUIDdb;
 import org.researchobject.roshow.manifest.ManifestJsonReader;
 import org.researchobject.roshow.storage.StorageFileNotFoundException;
@@ -32,50 +35,28 @@ public class RoController {
     }
 
     @GetMapping("/")
-    public String listUploadedFiles(Model model) throws IOException {
+    public String listUploadedFiles(Model model) throws IOException, JsonLdError, ParseException {
 
         model.addAttribute("files", storageService.loadAll().map(
                 path -> MvcUriComponentsBuilder.fromMethodName(RoController.class,
                         "serveFile", path.getFileName().toString()).build().toString())
                 .collect(Collectors.toList()));
 
-
         List<UUIDdb> list = storageService.getUUIDdbList();
         List<UUID> uuidList = new ArrayList<>();
-        List<String> authorsList;
-        List<String> profileList;
-        List<String> dateCreatedList;
+        Map<UUID, ManifestFile> manifestMap = new HashMap<>();
 
-        ManifestJsonReader jreader;
-        Map<UUID, List> authorsMap = new HashMap<>();
-        Map<UUID, List> profileMap = new HashMap<>();
-        Map<UUID, List> dateCreatedMap = new HashMap<>();
-
-
+        //Use uuid as index for manifestFiles and add as model attribute
+        //keep ManifestMap indexes in list of uuid's
         for (UUIDdb uuiDdb : list) {
             UUID uuid = uuiDdb.getUuid();
             uuidList.add(uuid);
-
             File file = new File(storageService.load(uuiDdb.getUuid().toString()).toString().concat("/.ro/manifest.json"));
-            jreader = new ManifestJsonReader(file);
-
-            profileList = new ArrayList<>();
-            dateCreatedList = new ArrayList<>();
-
-            authorsList = jreader.getAuthors();
-            profileList.add(jreader.getViewer());
-            dateCreatedList.add(jreader.getDateCreated());
-
-            authorsMap.put(uuid, authorsList);
-            profileMap.put(uuid, profileList);
-            dateCreatedMap.put(uuid, dateCreatedList);
-
+            ManifestFile manifestFile = new ManifestJsonReader(file).getManifest();
+            manifestMap.put(uuid, manifestFile);
         }
-
-        model.addAttribute("manifests", uuidList);
-        model.addAttribute("authorsInfo", authorsMap);
-        model.addAttribute("profileInfo", profileMap);
-        model.addAttribute("dateCreatedInfo", dateCreatedMap);
+        model.addAttribute("manifestsUuid", uuidList);
+        model.addAttribute("manifests", manifestMap);
         return "uploadForm";
     }
 

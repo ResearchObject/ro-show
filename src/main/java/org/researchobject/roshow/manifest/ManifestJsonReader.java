@@ -3,118 +3,115 @@ package org.researchobject.roshow.manifest;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import com.sun.istack.internal.Nullable;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class ManifestJsonReader {
 
-    private File file;
     private JSONObject jsonObject;
-    public ManifestJsonReader() {
 
+    public ManifestJsonReader(File file) throws IOException, ParseException {
+        JSONParser jsonParser = new JSONParser();
+        Object object = jsonParser.parse(new FileReader(file));
+        this.jsonObject = (JSONObject) object;
     }
 
-    public ManifestJsonReader(File file) {
-        this.file = file;
-        JSONParser jsonParser = new JSONParser();
-        try {
-            Object object = jsonParser
-                    .parse(new FileReader(file));
+    public ManifestFile getManifest(){
+        ManifestFile manifest = new ManifestFile();
+        manifest.setAggregates(this.getAggregates());
+        manifest.setAnnotations(this.getAnnotations());
+        manifest.setAuthors(this.getAuthors());
+        manifest.setContext(this.getContext());
+        manifest.setRetrievedFrom(this.getRetrievedFrom());
+        manifest.setCreatedBy(this.getViewer());
+        manifest.setCreatedOn(this.getDateCreated());
+        return manifest;
+    }
 
-            this.jsonObject = (JSONObject) object;
-        }
-        catch(FileNotFoundException fe)
-        {
-            fe.printStackTrace();
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
+    private JSONArray getJsonArray(String arrayTag, JSONObject aJsonObject){
+        return (JSONArray) aJsonObject.get(arrayTag);
+    }
+
+    private String getAttributeValue(String attribute, JSONObject aJsonObject){
+        return (String) aJsonObject.get(attribute);
+    }
+
+    private JSONObject getAttributeObject(String attribute, JSONObject aJsonObject){
+        return (JSONObject) aJsonObject.get(attribute);
     }
 
     public List<String> getAuthors() {
         List<String> authorsList = new ArrayList<>();
-        String authors = " ";
-        try{
-            JSONArray authoredBy = (JSONArray) jsonObject.get("authoredBy");
-
-            for(Object author : authoredBy)
-            {
-                if (author instanceof JSONObject){
-                    JSONObject jsonObject = (JSONObject)author;
-                    authors = (String) jsonObject.get("name");
-                }
-                authorsList.add(authors);
-            }
-        }
-        catch(Exception e){
-            e.printStackTrace();
+        for(Object author : getJsonArray("authoredBy", jsonObject)) {
+            authorsList.add(getAttributeValue("name", (JSONObject) author));
         }
         return authorsList;
     }
 
     public String getViewer() {
         String roProfile = " ";
-        String recommendedViewer = " ";
-        try{
-            JSONObject profile = (JSONObject) jsonObject.get("createdBy");
-            recommendedViewer = (String) profile.get("name");
-
-            if(recommendedViewer.equals("Common Workflow Language Viewer")){
+        String recommendedViewer = getAttributeValue("name", getAttributeObject("createdBy", jsonObject));
+        if(recommendedViewer.equals("Common Workflow Language Viewer")) {
                 roProfile += "Workflow Research Object";
-            }
         }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-
         return roProfile + " (can be viewed by " + recommendedViewer + ")";
     }
 
     public String getDateCreated(){
-        String dateCreated = " ";
-        try{
-            dateCreated = (String) jsonObject.get("createdOn");
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-        return dateCreated;
+        return getAttributeValue("createdOn", jsonObject);
     }
 
     public String getRetrievedFrom(){
-        StringBuilder sb = new StringBuilder();
-        String retrievedFr = "retrievedFrom";
-        return retrievedFr;
+        return getAttributeValue("retrievedFrom", jsonObject);
     }
 
-    public String getAggregates(){
-        StringBuilder sb = new StringBuilder();
-        String aggregates = "aggregates";
+    public List<Aggregate> getAggregates(){
+        List<Aggregate> aggregates= new ArrayList<>();
+        Aggregate aggregateHolder;
+
+        for(Object aggr : getJsonArray("aggregates", jsonObject)) {
+            aggregateHolder = new Aggregate();
+            aggregateHolder.setUri(getAttributeValue("uri", (JSONObject) aggr));
+            aggregateHolder.setMediatype(getAttributeValue("mediatype", (JSONObject) aggr));
+            aggregateHolder.setCreatedon(getAttributeValue("createdOn", (JSONObject)aggr));
+            /*aggregateHolder.setAuthors(Arrays.asList(getJsonArray("authoredBy", (JSONObject) aggr)
+                    .toArray()).stream().map(author ->
+                    getAttributeValue("name", (JSONObject) author))
+                    .collect(Collectors.toList()));
+            aggregateHolder.setRetrievedby(getAttributeValue("name", getAttributeObject("retrievedBy", (JSONObject) aggr)));*/
+            aggregateHolder.setRetrievedfrom(getAttributeValue("retrievedFrom", (JSONObject) aggr));
+            aggregateHolder.setConformsto(getAttributeValue("conformsTo", (JSONObject) aggr));
+            aggregateHolder.setFolderlocation(getAttributeValue("folder",
+                    getAttributeObject("bundledAs", (JSONObject) aggr)));
+            aggregateHolder.setBundleuri(getAttributeValue("uri",
+                    getAttributeObject("bundledAs", (JSONObject) aggr)));
+            aggregates.add(aggregateHolder);
+        }
         return aggregates;
     }
 
     public List<String> getAnnotations(){
         List<String> annotations = new ArrayList<>();
-        String annHolder = "";
-
-        JSONArray annotationsArray = (JSONArray) jsonObject.get("annotations");
-        for(Object annotation : annotationsArray)
+        for(Object annotation : getJsonArray("annotations", jsonObject))
         {
-            if (annotation instanceof JSONObject){
-                StringBuilder sb = new StringBuilder();
-                JSONObject jsonObject = (JSONObject) annotation;
-                annHolder = sb.append(jsonObject.get("uri")).append(" about-> ").append(jsonObject.get("content")).toString();
-            }
-            annotations.add(annHolder);
+            StringBuilder sb = new StringBuilder();
+            annotations.add(sb.append(getAttributeValue("uri", (JSONObject) annotation))
+                    .append(":").append(getAttributeValue("content", (JSONObject) annotation)).toString());
         }
-
         return annotations;
+    }
+
+    private String getContext(){
+        return "ww3";
     }
 
 }
