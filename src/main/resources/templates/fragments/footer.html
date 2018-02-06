@@ -3,11 +3,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title></title>
-    <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" href="/static/css/fragments.css" />
+    <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css" media="screen" />
 </head>
 <body>
 
-<div th:fragment="copy" class="container">
+<div th:fragment="copy" class="container" id="footer">
     <div class="row">
         <hr />
         <div class="col-lg-12 muted text-center">
@@ -21,12 +22,11 @@
     </div>
     <div class="row logos">
         <div class="col-lg-12 muted text-center">
-            <a href="http://www.esciencelab.org.uk/" rel="noopener" target="_blank"><img src="/img/manchester.svg"
-                                                                                         alt="The University of Manchester"
-                                                                                         title="eScienceLab, School of Computer Science, The University of Manchester" /></a>
+            <a href="http://www.esciencelab.org.uk/" rel="noopener" target="_blank"> <!-- <img src="/img/manchester.svg" alt="The University of Manchester" title="eScienceLab, School of Computer Science, The University of Manchester" /> --> </a>
         </div>
     </div>
 </div>
+
 
 <script src="webjars/jquery/2.1.4/jquery.min.js"></script>
 <script src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
