@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title></title>
     <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css" media="screen"/>
+    <link href="../static/css/footer-fixed-bottom.css" th:href="@{css/footer-fixed-bottom.css}" rel="stylesheet" media="screen"/>
+    <link href="../static/css/display-page.css" th:href="@{css/display-page.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
 
@@ -26,7 +28,7 @@
                         <li><a href="#tab3" data-toggle="tab">aggregates</a></li>
                         <li><a href="#tab4" data-toggle="tab">annotations</a></li>
                     </ul>
-                    <div class="tab-content">
+                    <div class="tab-content fixed-panel">
                         <div class="tab-pane active" id="tab1">
                             <ul class="list-unstyled">
                                 <li th:each="author : ${authors}">
