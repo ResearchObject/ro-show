@@ -3,12 +3,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title></title>
-    <link rel="stylesheet" href="/static/css/fragments.css" />
-    <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" th:href="@{/css/footer-fixed-bottom.css}" href="/static/css/footer-fixed-bottom.css" />
+    <link href="../../static/css/footer-fixed-bottom.css" th:href="@{css/fragments.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
 
-<div th:fragment="copy" class="container" id="footer">
+<div th:fragment="copy" class="container footer">
     <div class="row">
         <hr />
         <div class="col-lg-12 muted text-center">
@@ -22,7 +22,7 @@
     </div>
     <div class="row logos">
         <div class="col-lg-12 muted text-center">
-            <a href="http://www.esciencelab.org.uk/" rel="noopener" target="_blank"> <!-- <img src="/img/manchester.svg" alt="The University of Manchester" title="eScienceLab, School of Computer Science, The University of Manchester" /> --> </a>
+            <a href="http://www.esciencelab.org.uk/" rel="noopener" target="_blank"> <!-- <images src="/images/manchester.svg" alt="The University of Manchester" title="eScienceLab, School of Computer Science, The University of Manchester" /> --> </a>
         </div>
     </div>
 </div>
