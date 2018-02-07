@@ -1,15 +1,100 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Manifest</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css" media="screen"/>
 </head>
 <body>
 
+<nav th:replace="fragments/header :: navbar"></nav>
 
-<li th:each="json : ${jsonDump}">
-    <p th:text="${json}"></p>
-</li>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-sm-5 col-xs-12 gutter">
+            <h2>preview</h2>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="tabbable"> <!-- Only required for left/right tabs -->
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#tab1" data-toggle="tab">authors</a></li>
+                        <li><a href="#tab2" data-toggle="tab">retrieved from</a></li>
+                        <li><a href="#tab3" data-toggle="tab">aggregates</a></li>
+                        <li><a href="#tab4" data-toggle="tab">annotations</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <ul class="list-unstyled">
+                                <li th:each="author : ${authors}">
+                                    <p th:text="${author}"></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <p th:text="${retrievedFrom}"></p>
+                        </div>
+                        <div class="tab-pane" id="tab3">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="thead-inverse">
+                                    <th>URI</th>
+                                    <!--<th>authors</th>-->
+                                    <th>date created</th>
+                                    <th>mediatype</th>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="aggregate : ${aggregates}">
+                                        <td th:text="${aggregate.getUri()}">uri</td>
+                                        <!--<td th:text="${aggregate.getAthors()}">authors</td>-->
+                                        <td th:text="${aggregate.getCreatedon()}">date created</td>
+                                        <td th:text="${aggregate.getMediatype()}">mediatype</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab4">
+                            <ul class="list-unstyled">
+                                <li th:each="annotation : ${annotations}">
+                                    <p th:text="${annotation}"></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <h2 class="gutter">profile</h2>
+            <div class="panel panel-default ">
+                <div class="panel-body">
+                    <p><strong>[under development!!!]</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <h2 class="gutter">structure</h2>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p><strong>[under development!!!]</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div th:replace="fragments/footer :: copy"></div>
+
+<script src="webjars/jquery/2.1.4/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>

@@ -1,7 +1,10 @@
 package org.researchobject.roshow.controllers;
 
+import com.github.jsonldjava.core.JsonLdError;
+import org.json.simple.parser.ParseException;
+import org.researchobject.roshow.manifest.ManifestFile;
 import org.researchobject.roshow.model.UUIDdb;
-import org.researchobject.roshow.service.JsonReader;
+import org.researchobject.roshow.manifest.ManifestJsonReader;
 import org.researchobject.roshow.storage.StorageFileNotFoundException;
 import org.researchobject.roshow.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,38 +35,28 @@ public class RoController {
     }
 
     @GetMapping("/")
-    public String listUploadedFiles(Model model) throws IOException {
+    public String listUploadedFiles(Model model) throws IOException, JsonLdError, ParseException {
 
         model.addAttribute("files", storageService.loadAll().map(
                 path -> MvcUriComponentsBuilder.fromMethodName(RoController.class,
                         "serveFile", path.getFileName().toString()).build().toString())
                 .collect(Collectors.toList()));
 
-
         List<UUIDdb> list = storageService.getUUIDdbList();
         List<UUID> uuidList = new ArrayList<>();
-        List<String> manifestList;
+        Map<UUID, ManifestFile> manifestMap = new HashMap<>();
 
-        JsonReader jreader;
-        Map<UUID, List> manifestMap = new HashMap<>();
-
+        //Use uuid as index for manifestFiles and add as model attribute
+        //keep ManifestMap indexes in list of uuid's
         for (UUIDdb uuiDdb : list) {
             UUID uuid = uuiDdb.getUuid();
             uuidList.add(uuid);
-
             File file = new File(storageService.load(uuiDdb.getUuid().toString()).toString().concat("/.ro/manifest.json"));
-            jreader = new JsonReader(file);
-
-            manifestList = new ArrayList<>();
-            manifestList.add(jreader.getAuthors());
-            manifestList.add(jreader.getViewer());
-            manifestList.add(jreader.getDateCreated());
-
-            manifestMap.put(uuid, manifestList);
+            ManifestFile manifestFile = new ManifestJsonReader(file).getManifest();
+            manifestMap.put(uuid, manifestFile);
         }
-
-        model.addAttribute("manifests", uuidList);
-        model.addAttribute("manifestInfo", manifestMap);
+        model.addAttribute("manifestsUuid", uuidList);
+        model.addAttribute("manifests", manifestMap);
         return "uploadForm";
     }
 
