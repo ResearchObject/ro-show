@@ -1,15 +1,11 @@
 package org.researchobject.roshow.manifest;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import com.sun.istack.internal.Nullable;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -57,7 +53,7 @@ public class ManifestJsonReader {
         return authorsList;
     }
 
-    public String getViewer() {
+    private String getViewer() {
         String roProfile = " ";
         String recommendedViewer = getAttributeValue("name", getAttributeObject("createdBy", jsonObject));
         if(recommendedViewer.equals("Common Workflow Language Viewer")) {
@@ -66,7 +62,7 @@ public class ManifestJsonReader {
         return roProfile + " (can be viewed by " + recommendedViewer + ")";
     }
 
-    public String getDateCreated(){
+    private String getDateCreated(){
         return getAttributeValue("createdOn", jsonObject);
     }
 
@@ -83,17 +79,29 @@ public class ManifestJsonReader {
             aggregateHolder.setUri(getAttributeValue("uri", (JSONObject) aggr));
             aggregateHolder.setMediatype(getAttributeValue("mediatype", (JSONObject) aggr));
             aggregateHolder.setCreatedon(getAttributeValue("createdOn", (JSONObject)aggr));
-            /*aggregateHolder.setAuthors(Arrays.asList(getJsonArray("authoredBy", (JSONObject) aggr)
-                    .toArray()).stream().map(author ->
-                    getAttributeValue("name", (JSONObject) author))
-                    .collect(Collectors.toList()));
-            aggregateHolder.setRetrievedby(getAttributeValue("name", getAttributeObject("retrievedBy", (JSONObject) aggr)));*/
+            /*
+            aggregateHolder.setRetrievedby(getAttributeValue("name", getAttributeObject("retrievedBy", (JSONObject) aggr)));
+            List<String> authors = new ArrayList<>();
+            JSONObject authorsObject= (JSONObject) aggr;
+            JSONArray authorsArray = (JSONArray) authorsObject.get("authoredBy");
+            if(authorsArray != null){
+                for (Object author : authorsArray){
+                    String anAuthor = (String) ((JSONObject) author).get("uri");
+                    authors.add(anAuthor);
+                }
+            }
+
+            for (Object author : getJsonArray("authoredBy", (JSONObject) aggr)){
+                authors.add(getAttributeValue("uri", (JSONObject) author));
+            }
+            aggregateHolder.setAuthors(authors);
+            aggregateHolder.setRetrievedby(getAttributeValue("name", getAttributeObject("retrievedBy", (JSONObject) aggr)));
             aggregateHolder.setRetrievedfrom(getAttributeValue("retrievedFrom", (JSONObject) aggr));
             aggregateHolder.setConformsto(getAttributeValue("conformsTo", (JSONObject) aggr));
             aggregateHolder.setFolderlocation(getAttributeValue("folder",
                     getAttributeObject("bundledAs", (JSONObject) aggr)));
             aggregateHolder.setBundleuri(getAttributeValue("uri",
-                    getAttributeObject("bundledAs", (JSONObject) aggr)));
+                    getAttributeObject("bundledAs", (JSONObject) aggr)));*/
             aggregates.add(aggregateHolder);
         }
         return aggregates;

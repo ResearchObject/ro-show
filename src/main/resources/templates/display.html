@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css" media="screen"/>
     <link href="../static/css/footer-fixed-bottom.css" th:href="@{css/footer-fixed-bottom.css}" rel="stylesheet" media="screen"/>
-    <link href="../static/css/display-page.css" th:href="@{css/display-page.css}" rel="stylesheet" media="screen"/>
+    <link href="../static/css/main.css" th:href="@{css/main.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
 
@@ -28,7 +28,9 @@
                         <li><a href="#tab3" data-toggle="tab">aggregates</a></li>
                         <li><a href="#tab4" data-toggle="tab">annotations</a></li>
                     </ul>
-                    <div class="tab-content fixed-panel">
+                    <div class="tab-content fixed-panel xy-padding">
+                        <!-- authors tab -->
+                        <!-- -->
                         <div class="tab-pane active" id="tab1">
                             <ul class="list-unstyled">
                                 <li th:each="author : ${authors}">
@@ -36,29 +38,32 @@
                                 </li>
                             </ul>
                         </div>
+
                         <div class="tab-pane" id="tab2">
                             <p th:text="${retrievedFrom}"></p>
                         </div>
+                        <!-- aggregates tab -->
                         <div class="tab-pane" id="tab3">
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead class="thead-inverse">
-                                    <th>URI</th>
-                                    <!--<th>authors</th>-->
-                                    <th>date created</th>
-                                    <th>mediatype</th>
+                                        <th>URI</th>
+                                        <th>authors</th>
+                                        <th>date created</th>
+                                        <th>mediatype</th>
                                     </thead>
                                     <tbody>
-                                    <tr th:each="aggregate : ${aggregates}">
-                                        <td th:text="${aggregate.getUri()}">uri</td>
-                                        <!--<td th:text="${aggregate.getAthors()}">authors</td>-->
-                                        <td th:text="${aggregate.getCreatedon()}">date created</td>
-                                        <td th:text="${aggregate.getMediatype()}">mediatype</td>
-                                    </tr>
+                                        <tr th:each="aggregate : ${aggregates}">
+                                            <td th:text="${aggregate.getUri()}">uri</td>
+                                            <!--<td th:text="${aggregate.getAthors()}">authors</td>-->
+                                            <td th:text="${aggregate.getCreatedon()}">date created</td>
+                                            <td th:text="${aggregate.getMediatype()}">mediatype</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
+                        <!-- annotations tab -->
                         <div class="tab-pane" id="tab4">
                             <ul class="list-unstyled">
                                 <li th:each="annotation : ${annotations}">
@@ -66,6 +71,7 @@
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>

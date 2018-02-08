@@ -4,73 +4,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title></title>
     <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/webjars/font-awesome/5.0.6/web-fonts-with-css/css/fontawesome.min.css"/>
     <link href="../static/css/footer-fixed-bottom.css" th:href="@{css/footer-fixed-bottom.css}" rel="stylesheet" media="screen"/>
+    <link href="../static/css/main.css" th:href="@{css/main.css}" rel="stylesheet" media="screen"/>
 </head>
-<body>
+<body id="bootstrap-overrides">
 
 <nav th:replace="fragments/header :: navbar"></nav>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12" role="main" id="main">
-            <h1>Research Object Viewer Tool</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" role="main" id="main">
+                <h2>Research Object Viewer Tool</h2>
+            </div>
+        </div>
+        <div class="row">
+            <blockquote><p>This is a tool for top level viewing of the resources in a research object and annotations about them. Ro-show is still under development and subject to change without warning!!</p></blockquote>
+        </div>
+
+        <hr/>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Upload Research Object From File System</h2>
+                <p>Click the "choose file" button below to select research object bundle to upload from your device file system.</p>
+                <div class="alert alert-grey">
+                    <strong>Don't have a research object bundle on your device?</strong>
+                You can select from our ro bundle collection <a href=""> here</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <blockquote><p>This is a tool for top level viewing of the resources in a research object and annotations about them. Ro-show is still under development and subject to change without warning!!</p></blockquote>
-    </div>
 
-    <div class="row">
-
-        <form method="POST" enctype="multipart/form-data" action="/">
-
-            <div class="form-group">
-                <label>Zip File Input</label>
-                <input type="file" name="file" id="ZipInputFile">
-                    <p class="help-block">Choose a research object bundle</p>
-                </input>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-sm-push-6 ">
+                <ul class="list-unstyled  list-group margin-b-3">
+                    <li th:each="manifest : ${manifestsUuid}">
+                        <!--
+                        <div class="jumbotron jumbo-resize">
+                            <em>
+                                <a class="btn pink-item" th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}"></a>
+                            </em>
+                            <p><small th:text="${manifests.get(manifest).getCreatedOn()}"></small></p>
+                            <p><small th:text="${manifests.get(manifest).getCreatedBy()}"></small></p>
+                        </div>
+                        -->
+                        <em>
+                            <a class="list-group-item" th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}"></a>
+                        </em>
+                        <p class="xy-padding" th:text="${manifests.get(manifest).getCreatedOn()}">date created</p>
+                        <p class="xy-padding" th:text="${manifests.get(manifest).getCreatedBy()}">creator</p>
+                    </li>
+                </ul>
             </div>
 
-            <button type="submit" class="btn btn-default">Submit</button>
+            <div class="col-sm-6 col-sm-pull-6">
+                <form method="POST" enctype="multipart/form-data" action="/">
+                    <div class="form-group">
+                        <input type="file" name="file" id="ZipInputFile" placeholder="upload">
+                        <p class="help-block">Upload a research object bundle!</p>
+                        </input>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
 
-        </form>
+                <strong class="content" th:if="${message}">
+                    <p th:text="${message}"></p>
+                    <hr/>
+                </strong>
+                <!-- list group -->
+                <ul class="list-unstyled">
+                    <li th:each="file : ${files}">
+                        <em>
+                            <a th:href="${file}" th:text="${file}" />
+                        </em>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
     </div>
 
-
-    <div class="row">
-
-        <div class="col-sm-6 col-sm-push-6 ">
-            <ul class="list-unstyled  list-group margin-b-3">
-                <li th:each="manifest : ${manifestsUuid}">
-                    <em>
-                        <a class="list-group-item" th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}"></a>
-                    </em>
-                    <p><bold>Authors</bold><small th:text="${manifests.get(manifest).getAuthors()}"></small></p>
-                    <p><bold>Viewer</bold> <small th:text="${manifests.get(manifest).getCreatedBy()}"></small></p>
-                    <p><bold>Date Created</bold><small th:text="${manifests.get(manifest).getCreatedOn()}"></small></p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="col-sm-6 col-sm-pull-6">
-            <strong class="content" th:if="${message}">
-                <p th:text="${message}"></p>
-                <hr/>
-            </strong>
-
-
-            <!-- list group -->
-            <ul class="list-unstyled">
-                <li th:each="file : ${files}">
-                    <em>
-                        <a th:href="${file}" th:text="${file}" />
-                    </em>
-                </li>
-            </ul>
-        </div>
-
-    </div>
 </div>
 
 <div th:replace="fragments/footer :: copy"></div>
