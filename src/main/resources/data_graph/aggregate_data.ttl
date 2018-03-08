@@ -1,0 +1,8 @@
+@prefix ns0: <https://w3id.org/bundle/context> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/genome/cancer-genomics-workflow/blob/toil_compatibility/unaligned_bam_to_bqsr/>
+  a ns0:aggregates ;
+  ns0:createdOn "2017-10-14T06:48:48.453Z"^^xsd:string ;
+  ns0:mediatype "x-yaml"^^xsd:string ;
+  ns0:uri "/workflow/bqsr.cwl"^^xsd:string .
