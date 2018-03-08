@@ -6,10 +6,41 @@
     <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css" media="screen"/>
     <link href="../static/css/footer-fixed-bottom.css" th:href="@{css/footer-fixed-bottom.css}" rel="stylesheet" media="screen"/>
     <link href="../static/css/main.css" th:href="@{css/main.css}" rel="stylesheet" media="screen"/>
+    <link href="../static/css/diagnostics.css" th:href="@{css/diagnostics.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
 
 <nav th:replace="fragments/header :: navbar"></nav>
+
+<!--
+<div class="container">
+    <div class="row">
+        <div class="center-block">
+            <div class="dash-box dash-box-color-1">
+                <div class="dash-box-icon">
+                    <i class="glyphicon glyphicon-heart"></i>
+                </div>
+                <div class="dash-box-body">
+                        <div class="progress orange" >
+                            <span class="progress-left">
+                                <span class="progress-bar"></span>
+                            </span>
+                            <span class="progress-right">
+                                <span class="progress-bar"></span>
+                            </span>
+                            <div class="progress-value">45%</div>
+                        </div>
+                        <p class="fc text-lowercase">manifest diagnostics</p>
+                </div>
+
+                <div class="dash-box-action">
+                    <button>More Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
 
 <div class="container">
     <div class="row">
@@ -48,7 +79,7 @@
                                 <table class="table table-hover">
                                     <thead class="thead-inverse">
                                         <th>URI</th>
-                                        <th>authors</th>
+                                        <!--<th>authors</th>-->
                                         <th>date created</th>
                                         <th>mediatype</th>
                                     </thead>
@@ -77,7 +108,19 @@
             </div>
         </div>
     </div>
+</div>
 
+<div class="container">
+    <div class="row">
+        <div class="gutter">
+            <h2>validation</h2>
+        </div>
+        <div class="panel panel-default panel-body">
+        </div>
+    </div>
+</div>
+
+<div class="container">
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12">
             <h2 class="gutter">profile</h2>
@@ -97,8 +140,8 @@
             </div>
         </div>
     </div>
-
 </div>
+
 <div th:replace="fragments/footer :: copy"></div>
 
 <script src="webjars/jquery/2.1.4/jquery.min.js"></script>

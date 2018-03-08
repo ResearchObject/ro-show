@@ -97,6 +97,12 @@
 			<artifactId>font-awesome</artifactId>
 			<version>5.0.6</version>
 		</dependency>
+		<!-- apache jena framework: TopQuadrant shacl -->
+		<dependency>
+			<groupId>org.topbraid</groupId>
+			<artifactId>shacl</artifactId>
+			<version>1.0.1</version>
+		</dependency>
 
 	</dependencies>
 

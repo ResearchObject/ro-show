@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/webjars/font-awesome/5.0.6/web-fonts-with-css/css/fontawesome.min.css"/>
     <link href="../static/css/footer-fixed-bottom.css" th:href="@{css/footer-fixed-bottom.css}" rel="stylesheet" media="screen"/>
     <link href="../static/css/main.css" th:href="@{css/main.css}" rel="stylesheet" media="screen"/>
+    <link href="../static/css/diagnostics.css" th:href="@{css/diagnostics.css}" rel="stylesheet" media="screen"/>
 </head>
 <body id="bootstrap-overrides">
 
@@ -51,11 +52,25 @@
                             <p><small th:text="${manifests.get(manifest).getCreatedBy()}"></small></p>
                         </div>
                         -->
+                        <div class="dash-box dash-box-color-3">
+                            <div class="dash-box-icon">
+                                <i class="glyphicon glyphicon-folder-open"></i>
+                            </div>
+                            <div class="dash-box-body">
+                                <p class="fc text-lowercase" th:text="${manifests.get(manifest).getCreatedOn()}">manifest diagnostics</p>
+                            </div>
+
+                            <div class="dash-box-action">
+                                <a class="list-group-item" th:href="@{/displayManifest(manifest=${manifest})}">more info</a>
+                            </div>
+                        </div>
+                        <!--
                         <em>
                             <a class="list-group-item" th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}"></a>
                         </em>
                         <p class="xy-padding" th:text="${manifests.get(manifest).getCreatedOn()}">date created</p>
                         <p class="xy-padding" th:text="${manifests.get(manifest).getCreatedBy()}">creator</p>
+                        -->
                     </li>
                 </ul>
             </div>
