@@ -51,6 +51,9 @@ public class RoController {
         for (UUIDdb uuiDdb : list) {
             UUID uuid = uuiDdb.getUuid();
             uuidList.add(uuid);
+
+            //if storageService.load is .json continue, if anything else, don't load
+
             File file = new File(storageService.load(uuiDdb.getUuid().toString()).toString().concat("/.ro/manifest.json"));
             ManifestFile manifestFile = new ManifestJsonReader(file).getManifest();
             manifestMap.put(uuid, manifestFile);
@@ -76,6 +79,24 @@ public class RoController {
         storageService.store(file);
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
+
+        return "redirect:/";
+    }
+
+    @GetMapping("/external")
+    public String externalRedirects() {
+
+        return "external";
+    }
+
+    @PostMapping("/urlUpload")
+    public String handleURLUpload(@ModelAttribute("url") String url,
+                                   RedirectAttributes redirectAttributes) throws IOException {
+
+        storageService.downloadFileFromURL(url);
+        redirectAttributes.addFlashAttribute("message",
+                "You successfully uploaded " + url.substring(url.lastIndexOf("/"),
+                        url.length()) + "!");
 
         return "redirect:/";
     }

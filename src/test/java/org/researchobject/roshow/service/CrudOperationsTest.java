@@ -24,17 +24,17 @@ public class CrudOperationsTest {
 
     private List<UUIDdb> uuiDdbList = new LinkedList<>();
 
-    private void addToRepository (UUID uuid, String date){
-        uuiDrepository.save(new UUIDdb(uuid, date));
+    private void addToRepository (UUID uuid, String date, String roName){
+        uuiDrepository.save(new UUIDdb(uuid, date, roName));
     }
 
     @Before
     public void before() {
-        addToRepository(UUID.randomUUID(), Mockito.anyString());
-        addToRepository(UUID.randomUUID(), Mockito.anyString());
-        addToRepository(UUID.randomUUID(), Mockito.anyString());
-        addToRepository(UUID.randomUUID(), Mockito.anyString());
-        addToRepository(UUID.randomUUID(), Mockito.anyString());
+        addToRepository(UUID.randomUUID(), Mockito.anyString(), Mockito.anyString());
+        addToRepository(UUID.randomUUID(), Mockito.anyString(), Mockito.anyString());
+        addToRepository(UUID.randomUUID(), Mockito.anyString(), Mockito.anyString());
+        addToRepository(UUID.randomUUID(), Mockito.anyString(), Mockito.anyString());
+        addToRepository(UUID.randomUUID(), Mockito.anyString(), Mockito.anyString());
 
         for (UUIDdb uuiDdb : uuiDrepository.findAll()) {
             uuiDdbList.add(uuiDdb);

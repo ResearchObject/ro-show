@@ -69,7 +69,7 @@ public class Aggregate {
     public String getAuthors() {
         StringBuilder allAuthors = new StringBuilder();
         for(String author : authors){
-            allAuthors.append(author);
+            allAuthors.append(author).append(", ");
         }
         return allAuthors.toString();
     }
