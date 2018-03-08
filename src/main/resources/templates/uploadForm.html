@@ -31,7 +31,7 @@
                 <p>Click the "choose file" button below to select research object bundle to upload from your device file system.</p>
                 <div class="alert alert-grey">
                     <strong>Don't have a research object bundle on your device?</strong>
-                You can select from our ro bundle collection <a href=""> here</a>
+                You can select from our ro bundle collection <a href="/external"> here</a>
                 </div>
             </div>
         </div>
@@ -64,7 +64,15 @@
                 <form method="POST" enctype="multipart/form-data" action="/">
                     <div class="form-group">
                         <input type="file" name="file" id="ZipInputFile" placeholder="upload">
-                        <p class="help-block">Upload a research object bundle!</p>
+                        <p class="help-block">Upload a research object!</p>
+                        </input>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+                <form method="POST" name="url" action="/urlUpload">
+                    <div class="form-group">
+                        <input type="text" name="url" placeholder="Download URL">
                         </input>
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
