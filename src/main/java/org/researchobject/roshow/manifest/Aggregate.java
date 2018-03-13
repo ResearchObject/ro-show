@@ -1,6 +1,7 @@
 package org.researchobject.roshow.manifest;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Aggregate {
     private String uri;
@@ -38,8 +39,8 @@ public class Aggregate {
         this.retrievedfrom = retrievedfrom;
     }
 
-    void setRetrievedby(String retrievedby) {
-        this.retrievedby = retrievedby;
+    void setRetrievedby(Optional<String> retrievedby) {
+        this.retrievedby = retrievedby.get();
     }
 
     void setConformsto(String conformsto) {

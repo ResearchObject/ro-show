@@ -11,9 +11,22 @@ public class ManifestFile {
     private String retrievedFrom;
     private String retrievedOn;
     private String retrievedBy;
-    private String history;
+    private List<String> history;
     private List<Aggregate> aggregates;
     private List<String> annotations;
+    private String bundle_name;
+
+    ManifestFile(String name) {
+        bundle_name = name;
+    }
+
+    public String getBundle_name() {
+        return bundle_name;
+    }
+
+    public void setBundle_name(String bundle_name) {
+        this.bundle_name = bundle_name;
+    }
 
     public String getContext() {
         return context;
@@ -71,11 +84,11 @@ public class ManifestFile {
         this.retrievedBy = retrievedBy;
     }
 
-    public String getHistory() {
+    public List<String> getHistory() {
         return history;
     }
 
-    public void setHistory(String history) {
+    public void setHistory(List<String> history) {
         this.history = history;
     }
 
