@@ -1,7 +1,10 @@
 package org.researchobject.roshow.controllers;
 
 import org.json.simple.parser.ParseException;
+import org.researchobject.roshow.manifest.ManifestFile;
 import org.researchobject.roshow.manifest.ManifestJsonReader;
+import org.researchobject.roshow.model.UUIDdb;
+import org.researchobject.roshow.repository.UUIDrepository;
 import org.researchobject.roshow.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,12 +14,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.UUID;
+import java.util.*;
 
 @Controller
 public class ManifestController {
 
     private final StorageService storageService;
+    private boolean validation_result = true;
+
+    @Autowired
+    UUIDrepository uuiDrepository;
 
     @Autowired
     public ManifestController(StorageService storageService) {
@@ -24,27 +31,29 @@ public class ManifestController {
     }
 
     @GetMapping("/displayManifest")
-    public String displayManifest(@RequestParam UUID manifest, Model model) throws IOException, ParseException, NullPointerException {
+    public String displayManifest(@RequestParam UUID manifest, Model model)
+            throws IOException, ParseException, NullPointerException {
+
         File file = new File(storageService.load(manifest.toString()).toString().concat("/.ro/manifest.json"));
+        ManifestFile manifestfile = new ManifestJsonReader(file).getManifest(uuiDrepository.findOne(manifest).getRoName());
 
-        ManifestJsonReader jsonReader = new ManifestJsonReader(file);
+        model.addAttribute("manifest", manifestfile);
+        model.addAttribute("validation_result", validation_result);
+        validation_result = !validation_result;
 
-        /* TODO: replace with manifestFile */
-        model.addAttribute("authors", jsonReader.getAuthors());
-        model.addAttribute("retrievedFrom", jsonReader.getRetrievedFrom());
-        model.addAttribute("annotations", jsonReader.getAnnotations());
-        model.addAttribute("aggregates", jsonReader.getAggregates());
+        List<UUIDdb> uuidbList = storageService.getUUIDdbList();
+        Map<UUID, ManifestFile> manifestMap = new HashMap<>();
+        List<UUID> uuidList = new ArrayList<UUID>();
+        for (UUIDdb uuidb : uuidbList) {
+            ManifestFile manifestFile = new ManifestJsonReader(new File(storageService.load(uuidb.getUuid().toString())
+                    .toString().concat("/.ro/manifest.json"))).getManifest(uuidb.getRoName());
+            manifestMap.put(uuidb.getUuid(), manifestFile);
+            uuidList.add(uuidb.getUuid());
+        }
+
+        model.addAttribute("manifests", manifestMap);
+        model.addAttribute("uuids", uuidList);
         return "display";
     }
-
-    /* backup method that displays the JSON correctly on screen */
-//    @GetMapping("/displayManifest")
-//    public ResponseEntity<byte []> displayManifest(@RequestParam UUID manifest) throws IOException{
-//        File file = new File(storageService.load(manifest.toString()).toString().concat("/.ro/manifest.json"));
-//        return ResponseEntity
-//                .ok()
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .body(Files.readAllBytes(file.toPath()));
-//    }
 
 }

@@ -46,18 +46,16 @@ public class RoController {
         List<UUID> uuidList = new ArrayList<>();
         Map<UUID, ManifestFile> manifestMap = new HashMap<>();
 
-        //Use uuid as index for manifestFiles and add as model attribute
-        //keep ManifestMap indexes in list of uuid's
         for (UUIDdb uuiDdb : list) {
             UUID uuid = uuiDdb.getUuid();
             uuidList.add(uuid);
-
             //if storageService.load is .json continue, if anything else, don't load
-
-            File file = new File(storageService.load(uuiDdb.getUuid().toString()).toString().concat("/.ro/manifest.json"));
-            ManifestFile manifestFile = new ManifestJsonReader(file).getManifest();
+            File file = new File(storageService.load(uuid.toString()).toString().concat("/.ro/manifest.json"));
+            String bundle_name = uuiDdb.getRoName();
+            ManifestFile manifestFile = new ManifestJsonReader(file).getManifest(bundle_name);
             manifestMap.put(uuid, manifestFile);
         }
+
         model.addAttribute("manifestsUuid", uuidList);
         model.addAttribute("manifests", manifestMap);
         return "uploadForm";
