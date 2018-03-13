@@ -78,8 +78,8 @@ public class FileSystemStorageService implements StorageService {
         }
     }
 
-    public void downloadFileFromURL(String fileURL)
-            throws IOException {
+    @Override
+    public void downloadFileFromURL(String fileURL) throws IOException {
         URL url = new URL(fileURL);
         if(url.getPath().contains("rodetails")){
             fileURL = "http://sandbox.rohub.org/rodl/zippedROs/" + url.getPath().replace("/rodetails/", "").replace("/overview","") + "/";
