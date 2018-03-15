@@ -40,6 +40,43 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-sm-6 col-sm-push-6 ">
+                <ul class="list-unstyled  list-group margin-b-3">
+                    <li th:each="manifest : ${manifestsUuid}">
+                        <!--
+                        <div class="jumbotron jumbo-resize">
+                            <em>
+                                <a class="btn pink-item" th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}"></a>
+                            </em>
+                            <p><small th:text="${manifests.get(manifest).getCreatedOn()}"></small></p>
+                            <p><small th:text="${manifests.get(manifest).getCreatedBy()}"></small></p>
+                        </div>
+                        -->
+                        <div class="dash-box dash-box-color-3">
+                            <div class="dash-box-icon">
+                                <i class="glyphicon glyphicon-folder-open"></i>
+                            </div>
+                            <div class="dash-box-body">
+                                <p class="fc text-lowercase" th:text="${manifests.get(manifest).getCreatedOn()}"></p>
+                                <a class="fc text-lowercase" th:text="${manifests.get(manifest).getRetrievedFrom()}"></a>
+                            </div>
+
+                            <div class="dash-box-action">
+                                <a class="list-group-item" th:href="@{/displayManifest(manifest=${manifest})}">more info</a>
+                            </div>
+                        </div>
+                        <!--
+                        <em>
+                            <a class="list-group-item" th:href="@{/displayManifest(manifest=${manifest})}" th:text="${manifest}"></a>
+                        </em>
+                        <p class="xy-padding" th:text="${manifests.get(manifest).getCreatedOn()}">date created</p>
+                        <p class="xy-padding" th:text="${manifests.get(manifest).getCreatedBy()}">creator</p>
+                        -->
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-sm-pull-6">
             <div class="col-sm-6">
                 <form method="POST" enctype="multipart/form-data" action="/">
                     <div class="form-group">

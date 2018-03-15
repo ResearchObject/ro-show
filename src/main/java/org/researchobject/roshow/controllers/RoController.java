@@ -13,6 +13,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
@@ -46,16 +47,29 @@ public class RoController {
         List<UUID> uuidList = new ArrayList<>();
         Map<UUID, ManifestFile> manifestMap = new HashMap<>();
 
+        //Use uuid as index for manifestFiles and add as model attribute
+        //keep ManifestMap indexes in list of uuid's
         for (UUIDdb uuiDdb : list) {
             UUID uuid = uuiDdb.getUuid();
             uuidList.add(uuid);
+
             //if storageService.load is .json continue, if anything else, don't load
+
+            File file = new File(storageService.load(uuiDdb.getUuid().toString()).toString().concat("/.ro/manifest.json"));
+            if (file.exists()){
+            ManifestFile manifestFile = new ManifestJsonReader(file).getManifest();
             File file = new File(storageService.load(uuid.toString()).toString().concat("/.ro/manifest.json"));
             String bundle_name = uuiDdb.getRoName();
             ManifestFile manifestFile = new ManifestJsonReader(file).getManifest(bundle_name);
             manifestMap.put(uuid, manifestFile);
-        }
+            }
+            else {
+                file = ResourceUtils.getFile("classpath:demo/manifest.json");
+                ManifestFile manifestFile = new ManifestJsonReader(file).getManifest();
+                manifestMap.put(uuid, manifestFile);
+            }
 
+        }
         model.addAttribute("manifestsUuid", uuidList);
         model.addAttribute("manifests", manifestMap);
         return "uploadForm";
@@ -93,7 +107,7 @@ public class RoController {
 
         storageService.downloadFileFromURL(url);
         redirectAttributes.addFlashAttribute("message",
-                "You successfully uploaded " + url.substring(url.lastIndexOf("/"),
+                "You successfully uploaded " + url.substring(url.lastIndexOf("/") + 1,
                         url.length()) + "!");
 
         return "redirect:/";

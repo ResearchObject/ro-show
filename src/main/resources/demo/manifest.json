@@ -1,0 +1,581 @@
+{
+  "@context" : [ "https://w3id.org/bundle/context" ],
+  "id" : "/",
+  "manifest" : [ "manifest.json" ],
+  "createdOn" : "2018-01-17T20:51:03.194Z",
+  "createdBy" : {
+    "uri" : "https://view.commonwl.org",
+    "name" : "Common Workflow Language Viewer"
+  },
+  "authoredBy" : [ {
+    "uri" : "mailto:michael.crusoe@gmail.com",
+    "name" : "Michael R. Crusoe"
+  }, {
+    "uri" : "mailto:robert.d.finn@gmail.com",
+    "name" : "Rob Finn"
+  }, {
+    "uri" : "mailto:mr-c@users.noreply.github.com",
+    "name" : "Michael R. Crusoe"
+  }, {
+    "uri" : "mailto:ente12",
+    "name" : "maxim"
+  } ],
+  "retrievedFrom" : "https://github.com/mr-c/ebi-metagenomics-cwl/blob/viz/workflows/",
+  "retrievedOn" : "2018-01-17T20:51:03.194Z",
+  "retrievedBy" : {
+    "uri" : "https://view.commonwl.org",
+    "name" : "Common Workflow Language Viewer"
+  },
+  "history" : [ "http:/git2prov.org/git2prov?giturl=https:/github.com/mr-c/ebi-metagenomics-cwl.git&serialization=PROV-JSON" ],
+  "aggregates" : [ {
+    "uri" : "/workflow/run-toil-v3-paired.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.086Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/run-toil-v3-paired.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:5a8b99ca-ff99-4b19-a94c-c15b70b5225b",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/trim_and_reformat_reads-job.yaml",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.092Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/trim_and_reformat_reads-job.yaml",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:e5f166d3-2d19-4f8b-8480-cd73d16548ff",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/cmsearch-multimodel.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.095Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/cmsearch-multimodel.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:82d217e6-b568-4c93-9187-d9340dfcecd2",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/orf_prediction.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.174Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "rdfinn"
+    }, {
+      "uri" : "mailto:mr-c@users.noreply.github.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/orf_prediction.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:1afce6e1-14b9-4cf8-9f46-88ba594d9c9c",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/16S_taxonomic_analysis.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.229Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/16S_taxonomic_analysis.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:0e61170f-ea42-43af-bb80-2902d405e319",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-pipeline-v4-single.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.284Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:mr-c@users.noreply.github.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-pipeline-v4-single.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:b25d015c-7da8-4ce2-9d5f-95da9e6619a7",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/convert-to-v3-layout.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.339Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:mr-c@users.noreply.github.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/convert-to-v3-layout.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:d9ba2224-3802-4203-aab0-aa52d2b1e518",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-pipeline-v4-paired.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.391Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    }, {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-pipeline-v4-paired.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:ac4dee7d-3fde-467a-b2b0-1def275634cb",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/trim_and_reformat_reads.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.445Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/trim_and_reformat_reads.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:3b2e5926-6f1e-4290-b390-97eb3fa70f90",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/ebi-setup.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.498Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/ebi-setup.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:c52c6643-9e33-4894-b7f3-39f14e58e45c",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-pipeline-v3-paired-job.yaml",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.5Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-pipeline-v3-paired-job.yaml",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:e21891c0-f2b3-45d8-a0b4-0985a4cd6e22",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-pipeline-v3-paired.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.504Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-pipeline-v3-paired.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:8cc7b7c7-9c92-4e46-802c-5c8ffd68538f",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/qc-workflow.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.58Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "rdfinn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/qc-workflow.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:7cfdb85d-6ad9-4f28-b95f-d02c99419262",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/standalone.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.584Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:mr-c@users.noreply.github.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/standalone.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:ead048ed-dc15-4a09-bb88-2186d8b939ca",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-qc-paired.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.587Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "rdfinn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-qc-paired.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:2fe41b02-9aa2-4f85-9a2b-c2859aadd5f0",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-pipeline-v4-assembly-metaSPAdes.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.639Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-pipeline-v4-assembly-metaSPAdes.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:d104d918-b9af-42d6-aba0-c470cadfea37",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-pipeline-v3.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.692Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    }, {
+      "uri" : "mailto:mr-c@users.noreply.github.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:ente12",
+      "name" : "maxim"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-pipeline-v3.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:ccbf67fb-77f2-4c33-81e8-fd4ad4e41c09",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/rna-selector.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.749Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/rna-selector.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:153da6bb-3064-4bfd-ad9a-4609851e272c",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-core-analysis-v4.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.805Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    }, {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-core-analysis-v4.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:8fdda034-1a1d-4317-9e20-a0193bc952a0",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-pipeline-v4-paired-job.yaml",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.859Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-pipeline-v4-paired-job.yaml",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:ea0008d8-5873-4cf7-a647-246384163b17",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-assembly-job.yaml",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.863Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "rdfinn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-assembly-job.yaml",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:186807e1-9d55-4d2e-92df-f023544cb716",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-qc-paired-job.yaml",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.866Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "rdfinn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-qc-paired-job.yaml",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:6a927c71-17e2-448e-911a-aa23fdf2e6fe",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-qc-single.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.869Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-qc-single.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:5bd7aba6-6b73-42be-8817-7a21bbf65453",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/standalone-v3-paired.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:04.933Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/standalone-v3-paired.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:14718b81-089b-471c-a027-b222ce199107",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/emg-assembly.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.937Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:mr-c@users.noreply.github.com",
+      "name" : "Michael R. Crusoe"
+    }, {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/emg-assembly.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:05c2107a-14ed-4560-8c55-02e48997cad5",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/functional_analysis.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2018-01-17T20:51:04.992Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:robert.d.finn@gmail.com",
+      "name" : "Rob Finn"
+    }, {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/functional_analysis.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:d50924fc-0fad-4f9b-a02a-73abf297ce33",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/run-toil-v4.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2018-01-17T20:51:05.047Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:michael.crusoe@gmail.com",
+      "name" : "Michael R. Crusoe"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/mr-c/ebi-metagenomics-cwl/viz/workflows/run-toil-v4.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:f941db01-9a6f-4806-b233-df094893e53f",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/visualisation.png",
+    "mediatype" : "image/png",
+    "createdOn" : "2018-01-17T20:51:05.053Z",
+    "retrievedFrom" : "https://view.commonwl.org/graph/png/github.com/mr-c/ebi-metagenomics-cwl/blob/viz/workflows/emg-pipeline-v3.cwl",
+    "bundledAs" : {
+      "uri" : "urn:uuid:d3e23826-323f-4e22-8792-0baf6ae1bf25",
+      "folder" : "/"
+    }
+  }, {
+    "uri" : "/visualisation.svg",
+    "mediatype" : "image/svg+xml",
+    "createdOn" : "2018-01-17T20:51:05.15Z",
+    "retrievedFrom" : "https://view.commonwl.org/graph/svg/github.com/mr-c/ebi-metagenomics-cwl/blob/viz/workflows/emg-pipeline-v3.cwl",
+    "bundledAs" : {
+      "uri" : "urn:uuid:3270e8ce-a797-4b2d-8439-e94316b5faf1",
+      "folder" : "/"
+    }
+  } ],
+  "annotations" : [ {
+    "uri" : "urn:uuid:c311c70c-90e9-444f-80dc-931bd057aec3",
+    "about" : "/",
+    "content" : "annotations/merged.cwl"
+  }, {
+    "uri" : "urn:uuid:99cdbc57-00f6-48dc-8269-e9425e785e59",
+    "about" : "/",
+    "content" : "annotations/workflow.ttl"
+  } ]
+}
