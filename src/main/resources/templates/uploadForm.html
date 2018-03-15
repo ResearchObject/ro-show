@@ -57,7 +57,8 @@
                                 <i class="glyphicon glyphicon-folder-open"></i>
                             </div>
                             <div class="dash-box-body">
-                                <p class="fc text-lowercase" th:text="${manifests.get(manifest).getCreatedOn()}">manifest diagnostics</p>
+                                <p class="fc text-lowercase" th:text="${manifests.get(manifest).getCreatedOn()}"></p>
+                                <a class="fc text-lowercase" th:text="${manifests.get(manifest).getRetrievedFrom()}"></a>
                             </div>
 
                             <div class="dash-box-action">
