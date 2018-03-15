@@ -285,17 +285,17 @@ a:hover{
 }
 
 .dash-box.dash-box-color-3 {
-    background: rgb(63, 95, 147);
-    background: -moz-linear-gradient(top, rgba(69, 95, 147, 1) 0%, rgba(108,83,220,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(69, 95, 147, 1) 0%,rgba(108,83,220,1) 100%);
-    background: linear-gradient(to bottom, rgba(69, 95, 147, 1) 0%,rgba(108,83,220,1) 100%);
+    background: rgb(50, 100, 147);
+    background: -moz-linear-gradient(top, rgba(40, 100, 147, 1) 0%, rgba(69, 95, 147, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(40, 100, 147, 1) 0%,rgba(69, 95, 147, 1) 100%);
+    background: linear-gradient(to bottom, rgba(40, 100, 147, 1) 0%,rgba(69, 95, 147, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b747f7', endColorstr='#6c53dc',GradientType=0 );
 }
 .dash-box-color-3 .dash-box-icon:after {
-    background: rgba(180, 70, 245, 0.76);
+    background: rgba(69, 95, 147, 0.76);
 }
 .dash-box-color-3 .dash-box-icon:before {
-    background: rgba(226, 132, 255, 0.66);
+    background: rgba(50, 100, 147, 0.66);
 }
 .dash-box-color-3 .dash-box-icon > i {
     background: rgba(69, 95, 147, 1);

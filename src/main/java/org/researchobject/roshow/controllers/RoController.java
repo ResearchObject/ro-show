@@ -58,6 +58,9 @@ public class RoController {
             File file = new File(storageService.load(uuiDdb.getUuid().toString()).toString().concat("/.ro/manifest.json"));
             if (file.exists()){
             ManifestFile manifestFile = new ManifestJsonReader(file).getManifest();
+            File file = new File(storageService.load(uuid.toString()).toString().concat("/.ro/manifest.json"));
+            String bundle_name = uuiDdb.getRoName();
+            ManifestFile manifestFile = new ManifestJsonReader(file).getManifest(bundle_name);
             manifestMap.put(uuid, manifestFile);
             }
             else {

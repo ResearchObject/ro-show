@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -21,27 +22,43 @@ public class ManifestJsonReader {
         this.jsonObject = (JSONObject) object;
     }
 
-    public ManifestFile getManifest(){
-        ManifestFile manifest = new ManifestFile();
+    public ManifestFile getManifest(String name) {
+        ManifestFile manifest = new ManifestFile(name);
         manifest.setAggregates(this.getAggregates());
         manifest.setAnnotations(this.getAnnotations());
         manifest.setAuthors(this.getAuthors());
         manifest.setContext(this.getContext());
+        manifest.setHistory(this.getHistory());
         manifest.setRetrievedFrom(this.getRetrievedFrom());
         manifest.setCreatedBy(this.getViewer());
         manifest.setCreatedOn(this.getDateCreated());
         return manifest;
     }
 
-    private JSONArray getJsonArray(String arrayTag, JSONObject aJsonObject){
+    private JSONArray getJsonArray(String arrayTag, JSONObject aJsonObject) {
         return (JSONArray) aJsonObject.get(arrayTag);
     }
 
-    private String getAttributeValue(String attribute, JSONObject aJsonObject){
+    private String getAttributeValue(String attribute, JSONObject aJsonObject) {
         return (String) aJsonObject.get(attribute);
     }
 
-    private JSONObject getAttributeObject(String attribute, JSONObject aJsonObject){
+    private Optional<String> getOptionalAttributeValue(String attribute, Optional<JSONObject> aJsonObject) {
+        if (aJsonObject.isPresent()) {
+            return Optional.ofNullable(aJsonObject.get().get(attribute))
+                    .map(object -> (String) object);
+        }
+        else {
+            return Optional.of("null");
+        }
+    }
+
+    private Optional<JSONObject> getOptionalAttributeObject(String attribute, JSONObject aJsonObject) {
+        return Optional.ofNullable(aJsonObject.get(attribute))
+                .map(object -> (JSONObject) object);
+    }
+
+    private JSONObject getAttributeObject(String attribute, JSONObject aJsonObject) {
         return (JSONObject) aJsonObject.get(attribute);
     }
 
@@ -51,6 +68,14 @@ public class ManifestJsonReader {
             authorsList.add(getAttributeValue("name", (JSONObject) author));
         }
         return authorsList;
+    }
+
+    public List<String> getHistory() {
+        List<String> historyList = new ArrayList<>();
+        for(Object history : getJsonArray("history", jsonObject)) {
+            historyList.add((String) history);
+        }
+        return historyList;
     }
 
     private String getViewer() {
@@ -70,7 +95,7 @@ public class ManifestJsonReader {
         return getAttributeValue("retrievedFrom", jsonObject);
     }
 
-    public List<Aggregate> getAggregates(){
+    public List<Aggregate> getAggregates() {
         List<Aggregate> aggregates= new ArrayList<>();
         Aggregate aggregateHolder;
 
@@ -78,7 +103,7 @@ public class ManifestJsonReader {
             aggregateHolder = new Aggregate();
             aggregateHolder.setUri(getAttributeValue("uri", (JSONObject) aggr));
             aggregateHolder.setMediatype(getAttributeValue("mediatype", (JSONObject) aggr));
-            aggregateHolder.setCreatedon(getAttributeValue("createdOn", (JSONObject)aggr));
+            aggregateHolder.setCreatedon(getAttributeValue("createdOn", (JSONObject) aggr));
             /*
             aggregateHolder.setRetrievedby(getAttributeValue("name", getAttributeObject("retrievedBy", (JSONObject) aggr)));
             List<String> authors = new ArrayList<>();
@@ -94,8 +119,9 @@ public class ManifestJsonReader {
             for (Object author : getJsonArray("authoredBy", (JSONObject) aggr)){
                 authors.add(getAttributeValue("uri", (JSONObject) author));
             }
-            aggregateHolder.setAuthors(authors);
-            aggregateHolder.setRetrievedby(getAttributeValue("name", getAttributeObject("retrievedBy", (JSONObject) aggr)));
+            aggregateHolder.setAuthors(authors);*/
+            aggregateHolder.setRetrievedby(getOptionalAttributeValue("name", getOptionalAttributeObject("retrievedBy", (JSONObject) aggr)));
+            /*
             aggregateHolder.setRetrievedfrom(getAttributeValue("retrievedFrom", (JSONObject) aggr));
             aggregateHolder.setConformsto(getAttributeValue("conformsTo", (JSONObject) aggr));
             aggregateHolder.setFolderlocation(getAttributeValue("folder",
@@ -107,7 +133,7 @@ public class ManifestJsonReader {
         return aggregates;
     }
 
-    public List<String> getAnnotations(){
+    public List<String> getAnnotations() {
         List<String> annotations = new ArrayList<>();
         for(Object annotation : getJsonArray("annotations", jsonObject))
         {

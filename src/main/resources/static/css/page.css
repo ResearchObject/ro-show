@@ -1,5 +1,4 @@
-body
-{
+body {
     margin: 0;
     padding: 0;
     color: #333;
@@ -11,15 +10,18 @@ body
     padding-top: 20px;
 }
 
-.container
-{
+.container {
     max-width: 50em;
     margin: 0 auto;
 }
 
-.margin-tb-3
-{
+.margin-tb-3 {
     margin-top: 3em;
     margin-bottom: 3em;
+}
+
+.margin-lr-2 {
+    margin-left: 2em;
+    margin-right: 2em;
 }
 

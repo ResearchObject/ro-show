@@ -3,8 +3,8 @@ body {
 }
 
 .fixed-panel {
-    min-height: 250px;
-    max-height: 250px;
+    min-height: 400px;
+    max-height: 400px;
     overflow-y: scroll;
 }
 
