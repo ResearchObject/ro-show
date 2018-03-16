@@ -33,7 +33,7 @@
             </div>
             <div th:if="${validation_result == false}">
                 <h2 style="text-align: center; color: red">
-                    <i class="glyphicon glyphicon-warning-sign"></i>FAILED MANIFEST VALIDATION<i class="glyphicon glyphicon-warning-sign"></i>
+                    <i class="glyphicon glyphicon-remove-sign"></i>FAILED MANIFEST VALIDATION<i class="glyphicon glyphicon-remove-sign"></i>
                 </h2>
                 <p>Value for manifest.json property with path ‘mediatype’ is out of bounds</p>
             </div>
@@ -53,27 +53,25 @@
             <div class="panel-body">
                 <div class="tabbable">
                     <ul class="nav nav-pills">
-                        <li class="active"><a href="#tab1" data-toggle="tab">info</a></li>
+                        <li class="active"><a href="#tab1" data-toggle="tab">provenance</a></li>
                         <li><a href="#tab2" data-toggle="tab">aggregates</a></li>
                         <li><a href="#tab3" data-toggle="tab">annotations</a></li>
+                        <li><a href="#tab4" data-toggle="tab">info</a></li>
                     </ul>
                     <div class="tab-content fixed-panel xy-padding">
                         <div class="tab-pane active" id="tab1">
-                            <h4>authors</h4>
+                            <h4><b>authors</b></h4>
                             <ul class="list-unstyled">
                                 <li th:each="author : ${manifest.getAuthors()}">
                                     <p th:text="${author}"></p>
                                 </li>
                             </ul>
                             <hr/>
-                            <h4>retrieved from</h4>
+                            <h4><b>retrieved from</b></h4>
                             <p th:text="${manifest.getRetrievedFrom()}"></p>
                             <hr/>
-                            <h4>history</h4>
+                            <h4><b>history</b></h4>
                             <p th:text="${manifest.getHistory()}"></p>
-                            <hr/>
-                            <h4>context</h4>
-                            <p th:text="${manifest.getContext()}"></p>
                         </div>
 
                         <div class="tab-pane" id="tab2">
@@ -84,6 +82,7 @@
                                         <th>date/time created</th>
                                         <th>mediatype</th>
                                         <th>retrieved by</th>
+                                        <th>folder</th>
                                     </thead>
                                     <tbody>
                                         <tr th:each="aggregate : ${manifest.getAggregates()}">
@@ -91,6 +90,7 @@
                                             <td th:text="${aggregate.getCreatedon()}">date created</td>
                                             <td th:text="${aggregate.getMediatype()}">mediatype</td>
                                             <td th:text="${aggregate.getRetrievedby()}">retrievedby</td>
+                                            <td th:text="${aggregate.getFolderlocation()}">folder</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -103,6 +103,12 @@
                                     <p th:text="${annotation}"></p>
                                 </li>
                             </ul>
+                        </div>
+
+                        <div class="tab-pane" id="tab4">
+                            <h4><b>context</b></h4>
+                            <p th:text="${manifest.getContext()}"></p>
+                            <hr/>
                         </div>
                     </div>
                 </div>

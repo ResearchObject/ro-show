@@ -23,15 +23,21 @@ public class ManifestJsonReader {
     }
 
     public ManifestFile getManifest(String name) {
-        ManifestFile manifest = new ManifestFile(name);
+
+        ManifestFile manifest = new ManifestFile();
+        manifest.setBundle_name(name);
+
+        manifest.setContext(this.getContext());
+        manifest.setCreatedOn(this.getDateCreated());
+        manifest.setCreatedBy(this.getViewer());
+        manifest.setAuthors(this.getAuthors());
+        manifest.setRetrievedFrom(this.getRetrievedFrom());
+        manifest.setRetrievedOn(this.getRetrievedOn());
+        manifest.setRetrievedBy(this.getRetrievedBy());
+        manifest.setHistory(this.getHistory());
         manifest.setAggregates(this.getAggregates());
         manifest.setAnnotations(this.getAnnotations());
-        manifest.setAuthors(this.getAuthors());
-        manifest.setContext(this.getContext());
-        manifest.setHistory(this.getHistory());
-        manifest.setRetrievedFrom(this.getRetrievedFrom());
-        manifest.setCreatedBy(this.getViewer());
-        manifest.setCreatedOn(this.getDateCreated());
+
         return manifest;
     }
 
@@ -62,6 +68,27 @@ public class ManifestJsonReader {
         return (JSONObject) aJsonObject.get(attribute);
     }
 
+    private String getContext(){
+        StringBuilder sb = new StringBuilder();
+        for (Object context: getJsonArray("@context", jsonObject)) {
+            sb.append(context.toString());
+        }
+        return sb.toString();
+    }
+
+    private String getDateCreated(){
+        return getAttributeValue("createdOn", jsonObject);
+    }
+
+    private String getViewer() {
+        String roProfile = " ";
+        String recommendedViewer = getAttributeValue("name", getAttributeObject("createdBy", jsonObject));
+        if(recommendedViewer.equals("Common Workflow Language Viewer")) {
+            roProfile += "Workflow Research Object";
+        }
+        return roProfile + " (can be viewed by " + recommendedViewer + ")";
+    }
+
     public List<String> getAuthors() {
         List<String> authorsList = new ArrayList<>();
         for(Object author : getJsonArray("authoredBy", jsonObject)) {
@@ -70,29 +97,25 @@ public class ManifestJsonReader {
         return authorsList;
     }
 
+    public String getRetrievedFrom(){
+        return getAttributeValue("retrievedFrom", jsonObject);
+    }
+
+    //value is currently not displayed on display page
+    public String getRetrievedOn(){
+        return getAttributeValue("retrievedOn", jsonObject);
+    }
+
+    public String getRetrievedBy(){
+        return getAttributeValue("uri", getAttributeObject("retrievedBy", jsonObject));
+    }
+
     public List<String> getHistory() {
         List<String> historyList = new ArrayList<>();
         for(Object history : getJsonArray("history", jsonObject)) {
-            historyList.add((String) history);
+            historyList.add(history.toString());
         }
         return historyList;
-    }
-
-    private String getViewer() {
-        String roProfile = " ";
-        String recommendedViewer = getAttributeValue("name", getAttributeObject("createdBy", jsonObject));
-        if(recommendedViewer.equals("Common Workflow Language Viewer")) {
-                roProfile += "Workflow Research Object";
-        }
-        return roProfile + " (can be viewed by " + recommendedViewer + ")";
-    }
-
-    private String getDateCreated(){
-        return getAttributeValue("createdOn", jsonObject);
-    }
-
-    public String getRetrievedFrom(){
-        return getAttributeValue("retrievedFrom", jsonObject);
     }
 
     public List<Aggregate> getAggregates() {
@@ -104,30 +127,9 @@ public class ManifestJsonReader {
             aggregateHolder.setUri(getAttributeValue("uri", (JSONObject) aggr));
             aggregateHolder.setMediatype(getAttributeValue("mediatype", (JSONObject) aggr));
             aggregateHolder.setCreatedon(getAttributeValue("createdOn", (JSONObject) aggr));
-            /*
-            aggregateHolder.setRetrievedby(getAttributeValue("name", getAttributeObject("retrievedBy", (JSONObject) aggr)));
-            List<String> authors = new ArrayList<>();
-            JSONObject authorsObject= (JSONObject) aggr;
-            JSONArray authorsArray = (JSONArray) authorsObject.get("authoredBy");
-            if(authorsArray != null){
-                for (Object author : authorsArray){
-                    String anAuthor = (String) ((JSONObject) author).get("uri");
-                    authors.add(anAuthor);
-                }
-            }
-
-            for (Object author : getJsonArray("authoredBy", (JSONObject) aggr)){
-                authors.add(getAttributeValue("uri", (JSONObject) author));
-            }
-            aggregateHolder.setAuthors(authors);*/
             aggregateHolder.setRetrievedby(getOptionalAttributeValue("name", getOptionalAttributeObject("retrievedBy", (JSONObject) aggr)));
-            /*
-            aggregateHolder.setRetrievedfrom(getAttributeValue("retrievedFrom", (JSONObject) aggr));
-            aggregateHolder.setConformsto(getAttributeValue("conformsTo", (JSONObject) aggr));
             aggregateHolder.setFolderlocation(getAttributeValue("folder",
                     getAttributeObject("bundledAs", (JSONObject) aggr)));
-            aggregateHolder.setBundleuri(getAttributeValue("uri",
-                    getAttributeObject("bundledAs", (JSONObject) aggr)));*/
             aggregates.add(aggregateHolder);
         }
         return aggregates;
@@ -137,15 +139,9 @@ public class ManifestJsonReader {
         List<String> annotations = new ArrayList<>();
         for(Object annotation : getJsonArray("annotations", jsonObject))
         {
-            StringBuilder sb = new StringBuilder();
-            annotations.add(sb.append(getAttributeValue("uri", (JSONObject) annotation))
-                    .append(":").append(getAttributeValue("content", (JSONObject) annotation)).toString());
+            annotations.add(getAttributeValue("content", (JSONObject) annotation));
         }
         return annotations;
-    }
-
-    private String getContext(){
-        return "ww3";
     }
 
 }

@@ -1,24 +1,23 @@
 package org.researchobject.roshow.manifest;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ManifestFile {
 
-    private String context;
-    private String createdBy;
-    private String createdOn;
-    private List<String> authors;
-    private String retrievedFrom;
-    private String retrievedOn;
-    private String retrievedBy;
-    private List<String> history;
-    private List<Aggregate> aggregates;
-    private List<String> annotations;
-    private String bundle_name;
+    private String context  = "null";
+    private String createdBy = "null";
+    private String createdOn = "null";
+    private List<String> authors = Collections.singletonList("null");
+    private String retrievedFrom = "null";
+    private String retrievedOn = "null";
+    private String retrievedBy = "null";
+    private List<String> history = Collections.singletonList("null");
+    private List<Aggregate> aggregates = Collections.singletonList(new Aggregate());
+    private List<String> annotations = Collections.singletonList(getBundle_name() + " contains no additional annotation");
+    private String bundle_name = "null";
 
-    ManifestFile(String name) {
-        bundle_name = name;
-    }
+    ManifestFile() { }
 
     public String getBundle_name() {
         return bundle_name;

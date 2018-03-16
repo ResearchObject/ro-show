@@ -1,23 +1,22 @@
 package org.researchobject.roshow.manifest;
 
+
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 public class Aggregate {
-    private String uri;
-    private String mediatype;
-    private String createdon;
-    private List<String> authors;
-    private String retrievedfrom;
-    private String retrievedby;
-    private String conformsto;
-    private String folderlocation;
-    private String bundleuri;
+    private String uri = "null";
+    private String mediatype = "null";
+    private String createdon = "null";
+    private List<String> authors = Collections.singletonList("null");
+    private String retrievedfrom = "null";
+    private String retrievedby = "null";
+    private String conformsto = "null";
+    private String folderlocation = "null";
+    private String bundleuri = "null";
 
-    /* TODO: implement types for aggregates and specify attributes of each type */
-    /*public enum {
-        png, svg, cwl;
-    }*/
+    Aggregate() { }
 
     void setUri(String uri) {
         this.uri = uri;
