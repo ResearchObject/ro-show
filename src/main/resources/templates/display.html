@@ -15,7 +15,7 @@
 <div class="container">
     <ol class="breadcrumb">
         <li class="breadcrumb-item" th:each="uuid : ${uuids}">
-            <a th:text="${manifests.get(uuid).getBundle_name()}" th:href="@{/displayManifest(manifest=${uuid})}"></a>
+            <a th:text="${uuidMap.get(uuid)}" th:href="@{/displayManifest(manifest=${uuid})}"></a>
         </li>
     </ol>
 </div>
@@ -33,7 +33,7 @@
             </div>
             <div th:if="${validation_result == false}">
                 <h2 style="text-align: center; color: red">
-                    <i class="glyphicon glyphicon-remove-sign"></i>FAILED MANIFEST VALIDATION<i class="glyphicon glyphicon-remove-sign"></i>
+                    <i class="glyphicon glyphicon-warning-sign"></i>FAILED MANIFEST VALIDATION<i class="glyphicon glyphicon-warning-sign"></i>
                 </h2>
                 <p>Value for manifest.json property with path ‘mediatype’ is out of bounds</p>
             </div>
