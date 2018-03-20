@@ -1,0 +1,705 @@
+{
+  "@context" : { "@vocab": "https://w3id.org/bundle/context" },
+  "id" : "/",
+  "@type" : "manifest",
+  "manifest" : [ "manifest.json" ],
+  "createdOn" : "2017-10-06T10:13:33.207Z",
+  "createdBy" : {
+    "uri" : "https://view.commonwl.org",
+    "name" : "Common Workflow Language Viewer"
+  },
+  "authoredBy" : [ {
+    "uri" : "mailto:solomon.shorser@oicr.on.ca",
+    "name" : "SolomonShorser-OICR"
+  }, {
+    "uri" : "mailto:Solomon.Shorser@oicr.on.ca",
+    "name" : "Solomon Shorser"
+  } ],
+  "retrievedFrom" : "https://github.com/baminou/OxoG-Dockstore-Tools/blob/develop//",
+  "retrievedOn" : "2017-10-06T10:13:33.207Z",
+  "retrievedBy" : {
+    "uri" : "https://view.commonwl.org",
+    "name" : "Common Workflow Language Viewer"
+  },
+  "history" : [ "http:/git2prov.org/git2prov?giturl=https:/github.com/baminou/OxoG-Dockstore-Tools.git&serialization=PROV-JSON" ],
+  "aggregates" : [ {
+    "uri" : "/workflow/.dockerignore",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.318Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/.dockerignore",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:262b888e-fd91-4fed-b406-23a7f95ae967",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/vcf_merge_util.js",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.32Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/vcf_merge_util.js",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:28e9f8e7-2557-41b8-99de-27fdfad0626c",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/Dockerfile",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.322Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Dockerfile",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:ae3e3051-c983-4160-8e56-171c4d010b26",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/vcf_merge.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.324Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/vcf_merge.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:9ff5a973-a025-4ff4-b481-0640f6d2ad2a",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/scripts/clean_vcf.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.335Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:solomon.shorser@oicr.on.ca",
+      "name" : "SolomonShorser-OICR"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/clean_vcf.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:8f30de7a-be91-43ef-8680-12019f655cb1",
+      "folder" : "/workflow/scripts/"
+    }
+  }, {
+    "uri" : "/workflow/scripts/vcf_merge_by_type.pl",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.337Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:solomon.shorser@oicr.on.ca",
+      "name" : "SolomonShorser-OICR"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/vcf_merge_by_type.pl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:cbccfd79-1516-4ad6-bb02-037aa0810d2b",
+      "folder" : "/workflow/scripts/"
+    }
+  }, {
+    "uri" : "/workflow/scripts/extract_snvs_from_indels.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.34Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:solomon.shorser@oicr.on.ca",
+      "name" : "SolomonShorser-OICR"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/extract_snvs_from_indels.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:f977329e-b028-4865-8792-8cb84da84e47",
+      "folder" : "/workflow/scripts/"
+    }
+  }, {
+    "uri" : "/workflow/scripts/check_minibams.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.342Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:solomon.shorser@oicr.on.ca",
+      "name" : "SolomonShorser-OICR"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/check_minibams.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:cabea5ab-0954-423f-b0fd-9d31da313148",
+      "folder" : "/workflow/scripts/"
+    }
+  }, {
+    "uri" : "/workflow/scripts/normalize.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.345Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:solomon.shorser@oicr.on.ca",
+      "name" : "SolomonShorser-OICR"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/normalize.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:eec143a1-fbc1-4a71-95ff-80374eeae4f2",
+      "folder" : "/workflow/scripts/"
+    }
+  }, {
+    "uri" : "/workflow/scripts/pass_filter.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.347Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:solomon.shorser@oicr.on.ca",
+      "name" : "SolomonShorser-OICR"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/pass_filter.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:30e8f070-4af8-4148-9206-266a65adb5f4",
+      "folder" : "/workflow/scripts/"
+    }
+  }, {
+    "uri" : "/workflow/normalize.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.349Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/normalize.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:0a33ba29-b096-4226-8dfd-6db695bf5cd2",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/clean_vcf.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.36Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/clean_vcf.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:9f1b17a2-b422-4927-b29c-e9db0c3a4d9b",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/oxog_tool_dockerfile/Dockerfile",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.384Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:solomon.shorser@oicr.on.ca",
+      "name" : "SolomonShorser-OICR"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_tool_dockerfile/Dockerfile",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:89b1cbe4-21b4-4c9d-a542-5c1e44b3ab03",
+      "folder" : "/workflow/oxog_tool_dockerfile/"
+    }
+  }, {
+    "uri" : "/workflow/oxog_tool_dockerfile/README.md",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.385Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:solomon.shorser@oicr.on.ca",
+      "name" : "SolomonShorser-OICR"
+    }, {
+      "uri" : "mailto:Solomon.Shorser@oicr.on.ca",
+      "name" : "Solomon Shorser"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_tool_dockerfile/README.md",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:842100d5-fa54-4427-ae0d-952502261a2d",
+      "folder" : "/workflow/oxog_tool_dockerfile/"
+    }
+  }, {
+    "uri" : "/workflow/oxog_tool_dockerfile/run_oxog_tool.py",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.388Z",
+    "authoredBy" : [ {
+      "uri" : "mailto:solomon.shorser@oicr.on.ca",
+      "name" : "SolomonShorser-OICR"
+    } ],
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_tool_dockerfile/run_oxog_tool.py",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:07d61244-fa68-4e9b-a22c-15dcfa72c0c7",
+      "folder" : "/workflow/oxog_tool_dockerfile/"
+    }
+  }, {
+    "uri" : "/workflow/TumourType.yaml",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.391Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/TumourType.yaml",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:f6b39286-a7b6-4b52-8f38-fccd8bfa0e6b",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/qa_check_subwf.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.393Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/qa_check_subwf.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:49180f09-ae9b-4e7b-90c3-d5e0985d0661",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/Variantbam-for-dockstore/sample_input.json",
+    "mediatype" : "application/json",
+    "createdOn" : "2017-10-06T10:13:33.404Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/sample_input.json",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:5e6cfd82-2816-4d02-94bd-d3bfb3d6d6a1",
+      "folder" : "/workflow/Variantbam-for-dockstore/"
+    }
+  }, {
+    "uri" : "/workflow/Variantbam-for-dockstore/Dockerfile",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.406Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/Dockerfile",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:c1cd8323-8999-4b65-a71b-4972146e5d15",
+      "folder" : "/workflow/Variantbam-for-dockstore/"
+    }
+  }, {
+    "uri" : "/workflow/Variantbam-for-dockstore/variantbam.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.408Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/variantbam.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:d3e6478a-4ca0-46da-b593-8e51c991aa43",
+      "folder" : "/workflow/Variantbam-for-dockstore/"
+    }
+  }, {
+    "uri" : "/workflow/Variantbam-for-dockstore/run_variant_bam.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.419Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/run_variant_bam.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:1db84ade-d891-4b1d-9df1-21ce8bca87cb",
+      "folder" : "/workflow/Variantbam-for-dockstore/"
+    }
+  }, {
+    "uri" : "/workflow/Variantbam-for-dockstore/README.md",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.421Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/README.md",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:7a102ddf-3796-4555-8b6a-99220997c3d4",
+      "folder" : "/workflow/Variantbam-for-dockstore/"
+    }
+  }, {
+    "uri" : "/workflow/pass-filter.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.422Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/pass-filter.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:0407b2ab-6449-48a1-90d9-b23bbdf66ac8",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/zip_and_index_vcf.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.433Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/zip_and_index_vcf.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:cebab6a1-5d78-4261-bf22-e07dd83d0df2",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/sga-annotate-docker/Dockerfile",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.447Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/Dockerfile",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:469c2d63-41f3-4eb1-933b-3419f8d73ff0",
+      "folder" : "/workflow/sga-annotate-docker/"
+    }
+  }, {
+    "uri" : "/workflow/sga-annotate-docker/sample.json",
+    "mediatype" : "application/json",
+    "createdOn" : "2017-10-06T10:13:33.45Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/sample.json",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:1a5774d8-f540-4b03-801d-646146d182f3",
+      "folder" : "/workflow/sga-annotate-docker/"
+    }
+  }, {
+    "uri" : "/workflow/sga-annotate-docker/snv_annotate.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.452Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/snv_annotate.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:2b79a2d3-2b89-4c96-b345-483fc4203dcf",
+      "folder" : "/workflow/sga-annotate-docker/"
+    }
+  }, {
+    "uri" : "/workflow/sga-annotate-docker/annotate_from_readcounts.py",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.454Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/annotate_from_readcounts.py",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:4298e2cf-cf48-4137-b727-15ab025c1eb0",
+      "folder" : "/workflow/sga-annotate-docker/"
+    }
+  }, {
+    "uri" : "/workflow/sga-annotate-docker/snv.header",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.456Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/snv.header",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:a9b00376-a1bc-4d47-aa73-c6d05c5e9032",
+      "folder" : "/workflow/sga-annotate-docker/"
+    }
+  }, {
+    "uri" : "/workflow/sga-annotate-docker/indel.header",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.458Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/indel.header",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:1644e529-7b4b-4ea4-ae32-fedcb6823d71",
+      "folder" : "/workflow/sga-annotate-docker/"
+    }
+  }, {
+    "uri" : "/workflow/sga-annotate-docker/Dockstore.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.46Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/Dockstore.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:4a9a7318-aa93-468f-973a-3d8cee7dc9ec",
+      "folder" : "/workflow/sga-annotate-docker/"
+    }
+  }, {
+    "uri" : "/workflow/sga-annotate-docker/annotate.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.471Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/annotate.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:96f2de29-719c-4463-b80c-36b36f01aac6",
+      "folder" : "/workflow/sga-annotate-docker/"
+    }
+  }, {
+    "uri" : "/workflow/sga-annotate-docker/indel_annotate.sh",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.473Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/indel_annotate.sh",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:34be45b7-d972-4321-bab7-2a6db74a0e0c",
+      "folder" : "/workflow/sga-annotate-docker/"
+    }
+  }, {
+    "uri" : "/workflow/.gitmodules",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.475Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/.gitmodules",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:7e0ce77e-e4c4-456b-a146-ebbc034c182c",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/annotator_sub_wf.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.477Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/annotator_sub_wf.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:a0ad132e-6d92-4f40-8ab5-6f2d70737a25",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/preprocess_util.js",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.488Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/preprocess_util.js",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:5c62724f-82f7-4fb4-a4c7-49626d7b4dfb",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/PreprocessedFilesType.yaml",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.49Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/PreprocessedFilesType.yaml",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:7bced9f6-8984-407a-a657-485192ba57c5",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/oxog_sub_wf.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.491Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_sub_wf.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:d9b437d1-8f7a-4fab-847f-78ce1f759220",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/oxog.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.502Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:3f642321-f74b-4a6c-ac1e-9d9174b7c78c",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/oxog_varbam_annotate_util.js",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.514Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_varbam_annotate_util.js",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:bd24281d-7013-4216-b40f-ce003f4a9ed1",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/extract_snv.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.515Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/extract_snv.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:58649221-8065-4f1b-b96c-f7f05346e9b6",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/.gitignore",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.527Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/.gitignore",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:ea75393f-6605-4572-9126-b55e85fe0b92",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/README.md",
+    "mediatype" : "application/octet-stream",
+    "createdOn" : "2017-10-06T10:13:33.528Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/README.md",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "bundledAs" : {
+      "uri" : "urn:uuid:5e8ad8cd-c61a-42ba-ba43-9e003c8cc39c",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/oxog_varbam_annotate_wf.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.53Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_varbam_annotate_wf.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:b766bcd4-8428-4f75-b3c6-9999669d39ed",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/minibam_sub_wf.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.541Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/minibam_sub_wf.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:f06868ca-6766-4317-a8ba-cb9298404090",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/workflow/preprocess_vcf.cwl",
+    "mediatype" : "text/x-yaml",
+    "createdOn" : "2017-10-06T10:13:33.554Z",
+    "retrievedFrom" : "https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/preprocess_vcf.cwl",
+    "retrievedBy" : {
+      "uri" : "https://view.commonwl.org",
+      "name" : "Common Workflow Language Viewer"
+    },
+    "conformsTo" : "https://w3id.org/cwl/v1.0",
+    "bundledAs" : {
+      "uri" : "urn:uuid:d0b0951e-d21c-47b9-9b7f-bf919250f44f",
+      "folder" : "/workflow/"
+    }
+  }, {
+    "uri" : "/visualisation.png",
+    "mediatype" : "image/png",
+    "createdOn" : "2017-10-06T10:13:33.613Z",
+    "retrievedFrom" : "https://view.commonwl.org/graph/png/github.com/baminou/OxoG-Dockstore-Tools/blob/develop/oxog_sub_wf.cwl",
+    "bundledAs" : {
+      "uri" : "urn:uuid:2503af3f-aa4e-4861-ae8d-70a1285616f6",
+      "folder" : "/"
+    }
+  }, {
+    "uri" : "/visualisation.svg",
+    "mediatype" : "image/svg+xml",
+    "createdOn" : "2017-10-06T10:13:33.629Z",
+    "retrievedFrom" : "https://view.commonwl.org/graph/svg/github.com/baminou/OxoG-Dockstore-Tools/blob/develop/oxog_sub_wf.cwl",
+    "bundledAs" : {
+      "uri" : "urn:uuid:1a5e3674-a630-49df-b02f-bd0f4e9076a3",
+      "folder" : "/"
+    }
+  } ],
+  "annotations" : [ {
+    "uri" : "urn:uuid:f15b2ada-efeb-4127-98cd-c8c175c2317f",
+    "about" : "/",
+    "content" : "annotations/merged.cwl"
+  }, {
+    "uri" : "urn:uuid:983e1d76-9ea6-4950-a98a-339e1cc7d23b",
+    "about" : "/",
+    "content" : "annotations/workflow.ttl"
+  } ]
+}

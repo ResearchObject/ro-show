@@ -1,0 +1,48 @@
+@prefix schema: <https://w3id.org/bundle/context> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:ProvenanceShape
+    a sh:NodeShape ;
+    sh:targetClass schema:manifest ;
+    sh:property [
+        sh:path schema:createdOn ;
+        sh:datatype xsd:dateTime;
+    ] ;
+    sh:property [
+        sh:path schema:createdBy ;
+        sh:node schema:UriNameShape ;
+    ] ;
+    sh:property [
+        sh:path schema:authoredBy ;
+        sh:node schema:UriNameShape ;
+    ] ;
+    sh:property [
+        sh:path schema:retrievedBy ;
+        sh:node schema:UriNameShape ;
+    ] ;
+    sh:property [
+        sh:path schema:retrievedFrom ;
+        sh:datatype xsd:string;
+    ] ;
+    sh:property [
+        sh:path schema:retrievedOn ;
+        sh:datatype xsd:dateTime;
+    ] ;
+    sh:property [
+        sh:path schema:history ;
+        sh:datatype xsd:dateTime;
+    ] .
+
+schema:UriNameShape
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:property [
+        sh:path schema:uri  ;
+        sh:dataType xsd:dateTime ;
+    ]  ;
+    sh:property [
+        sh:path schema:name  ;
+        sh:datatType xsd:string  ;
+    ]  .
+

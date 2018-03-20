@@ -1,0 +1,35 @@
+@prefix ns0: <https://w3id.org/bundle/context> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/genome/cancer-genomics-workflow/blob/toil_compatibility/unaligned_bam_to_bqsr/>
+  a ns0:manifest ;
+  ns0:annotations [
+    ns0:about "/"^^xsd:string ;
+    ns0:content "annotations/merged.cwl"^^xsd:string ;
+    ns0:uri "urn:uuid:f15b2ada-efeb-4127-98cd-c8c175c2317f"^^xsd:string
+  ], [
+    ns0:about "/"^^xsd:string ;
+    ns0:content "annotations/workflow.ttl"^^xsd:string ;
+    ns0:uri "urn:uuid:983e1d76-9ea6-4950-a98a-339e1cc7d23b"^^xsd:string
+  ] ;
+  ns0:authoredBy [
+    ns0:name "SolomonShorser-OICR"^^xsd:string ;
+    ns0:uri "mailto:solomon.shorser@oicr.on.ca"^^xsd:string
+  ], [
+    ns0:name "Solomon Shorser"^^xsd:string ;
+    ns0:uri "mailto:Solomon.Shorser@oicr.on.ca"^^xsd:string
+  ] ;
+  ns0:createdBy [
+    ns0:name "Common Workflow Language Viewer"^^xsd:string ;
+    ns0:uri "https://view.commonwl.org"^^xsd:string
+  ] ;
+  ns0:createdOn "2017-10-06T10:13:33.207Z"^^xsd:dateTime ;
+  ns0:history "http:/git2prov.org/git2prov?giturl=https:/github.com/baminou/OxoG-Dockstore-Tools.git&serialization=PROV-JSON"^^xsd:string ;
+  ns0:id "/"^^xsd:string ;
+  ns0:manifest "manifest.json"^^xsd:string ;
+  ns0:retrievedBy [
+    ns0:name "Common Workflow Language Viewer"^^xsd:string ;
+    ns0:uri "https://view.commonwl.org"^^xsd:string
+  ] ;
+  ns0:retrievedFrom "https://github.com/baminou/OxoG-Dockstore-Tools/blob/develop//"^^xsd:string ;
+  ns0:retrievedOn "2017-10-06T10:13:33.207Z"^^xsd:string .

@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns="https://w3id.org/bundle/context/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:nodeID="N97a7db3e044d4857829aea59d8ba2b47">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce72bade515340aba50f766f6d34e528">
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+    <name>SolomonShorser-OICR</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na1b76d29b50d43f5a6b061dd6d9110e9">
+    <bundledAs rdf:nodeID="N366e0c9fd1274c18ae05587682bdbdaf"/>
+    <createdOn>2017-10-06T10:13:33.613Z</createdOn>
+    <uri>/visualisation.png</uri>
+    <mediatype>image/png</mediatype>
+    <retrievedFrom>https://view.commonwl.org/graph/png/github.com/baminou/OxoG-Dockstore-Tools/blob/develop/oxog_sub_wf.cwl</retrievedFrom>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na0de494ed96c4edab339519615b2dae5">
+    <authoredBy rdf:nodeID="N23e69a533d7c4803849736daefc3f26b"/>
+    <bundledAs rdf:nodeID="N2f6c76a12ad7407dabf7a57ea793fd64"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/pass_filter.sh</retrievedFrom>
+    <createdOn>2017-10-06T10:13:33.347Z</createdOn>
+    <mediatype>application/octet-stream</mediatype>
+    <uri>/workflow/scripts/pass_filter.sh</uri>
+    <retrievedBy rdf:nodeID="N9d225f843c36493db6151bed9ea9d03b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb9d4a07d2eb742d68821e1f24db3dc7a">
+    <mediatype>application/octet-stream</mediatype>
+    <bundledAs rdf:nodeID="N0bce9dc9ef8b42a4824ed1d413cbbdaf"/>
+    <createdOn>2017-10-06T10:13:33.421Z</createdOn>
+    <retrievedBy rdf:nodeID="N3c7147df65d0444c885422e26dbd9557"/>
+    <uri>/workflow/Variantbam-for-dockstore/README.md</uri>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/README.md</retrievedFrom>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3056f9d9c8a641bc9a2bd0184a910a2a">
+    <bundledAs rdf:nodeID="Nbafc8349a04d44ec9a99358b0611f6e9"/>
+    <createdOn>2017-10-06T10:13:33.475Z</createdOn>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/.gitmodules</retrievedFrom>
+    <uri>/workflow/.gitmodules</uri>
+    <mediatype>application/octet-stream</mediatype>
+    <retrievedBy rdf:nodeID="Ne3f2ae1c8b9e4801902c4c9fdbea4efc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neff2b32d00ad4bcb80442078a3f3baec">
+    <uri>urn:uuid:983e1d76-9ea6-4950-a98a-339e1cc7d23b</uri>
+    <about>/</about>
+    <content>annotations/workflow.ttl</content>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N552ba808635b4e0b80f840d9dae55aee">
+    <createdOn>2017-10-06T10:13:33.49Z</createdOn>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/PreprocessedFilesType.yaml</retrievedFrom>
+    <uri>/workflow/PreprocessedFilesType.yaml</uri>
+    <retrievedBy rdf:nodeID="N16997e23452844b48b32307d03ad2720"/>
+    <bundledAs rdf:nodeID="N0f6866b045c2404dac5d0c5be5de9d2e"/>
+    <mediatype>application/octet-stream</mediatype>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N91fccdf602e54ef2b8fe67f9e056a286">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc79a6c488a5d4c6eb5a288712a25f844">
+    <retrievedBy rdf:nodeID="Nc2ef9d485acf43d3af1d1740af6e3597"/>
+    <uri>/workflow/Dockerfile</uri>
+    <bundledAs rdf:nodeID="N5a11aaf0270c4f1ca853ce89e2750cd4"/>
+    <createdOn>2017-10-06T10:13:33.322Z</createdOn>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Dockerfile</retrievedFrom>
+    <mediatype>application/octet-stream</mediatype>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb0c756e333234d31824481f9513b5cb2">
+    <bundledAs rdf:nodeID="N63cedef3f2794d1e93a809783710689f"/>
+    <createdOn>2017-10-06T10:13:33.422Z</createdOn>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <uri>/workflow/pass-filter.cwl</uri>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/pass-filter.cwl</retrievedFrom>
+    <mediatype>text/x-yaml</mediatype>
+    <retrievedBy rdf:nodeID="N0e79ea99af204dff8ae0e7eae991a4cb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfa08f791f50c4aa1b5febfe5da6e8feb">
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/Dockerfile</retrievedFrom>
+    <retrievedBy rdf:nodeID="Ncfcd5fcc704741a8979a5f57a4e2e2cb"/>
+    <bundledAs rdf:nodeID="Nc32bb4cfb6f5482fb1dc9beadd055795"/>
+    <mediatype>application/octet-stream</mediatype>
+    <createdOn>2017-10-06T10:13:33.406Z</createdOn>
+    <uri>/workflow/Variantbam-for-dockstore/Dockerfile</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne3484410ca83495eb1d3ba2a7eb48d44">
+    <uri>/workflow/vcf_merge_util.js</uri>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/vcf_merge_util.js</retrievedFrom>
+    <mediatype>application/octet-stream</mediatype>
+    <retrievedBy rdf:nodeID="N991294b471ee408f86f64d70c5661a8c"/>
+    <bundledAs rdf:nodeID="N410f4030cc544512af69b9ca619cb685"/>
+    <createdOn>2017-10-06T10:13:33.32Z</createdOn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne290fc60f87f4c9fb85cc53c7b73233a">
+    <uri>urn:uuid:8f30de7a-be91-43ef-8680-12019f655cb1</uri>
+    <folder>/workflow/scripts/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N49821999526a44528cf48dc9fd1c3de2">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:a0ad132e-6d92-4f40-8ab5-6f2d70737a25</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9deab65bc6d546ffaa7c946d02dfc90f">
+    <createdOn>2017-10-06T10:13:33.337Z</createdOn>
+    <uri>/workflow/scripts/vcf_merge_by_type.pl</uri>
+    <bundledAs rdf:nodeID="Nca44f190afb24b5183b970199223a430"/>
+    <mediatype>application/octet-stream</mediatype>
+    <authoredBy rdf:nodeID="N28663227116043658379d977d57df6bc"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/vcf_merge_by_type.pl</retrievedFrom>
+    <retrievedBy rdf:nodeID="N983c767606a943c6ba49b917674db9b0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N28663227116043658379d977d57df6bc">
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+    <name>SolomonShorser-OICR</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3daff7f7d25e4e439d367b0b1146bda2">
+    <aggregates rdf:nodeID="Na543b69a1d9f4d6da9cb06fc62b2d9d6"/>
+    <aggregates rdf:nodeID="N552ba808635b4e0b80f840d9dae55aee"/>
+    <aggregates rdf:nodeID="N3904a142d68e4969b5df1a5c5c917439"/>
+    <aggregates rdf:nodeID="N2251fed9226e4748af5e19b108b865f2"/>
+    <retrievedFrom>https://github.com/baminou/OxoG-Dockstore-Tools/blob/develop//</retrievedFrom>
+    <retrievedBy rdf:nodeID="Nb4beb91a7e5f4cb9ac8c9fe2e4ba6870"/>
+    <aggregates rdf:nodeID="N28cf1740d3544a5aabf8f67ad6ad608e"/>
+    <aggregates rdf:nodeID="N307fea42fa964c548b06403dc4e6b2f7"/>
+    <aggregates rdf:nodeID="Nd2bb243a65584522ae5703c7942becc6"/>
+    <aggregates rdf:nodeID="Nb9d4a07d2eb742d68821e1f24db3dc7a"/>
+    <aggregates rdf:nodeID="Nbd5e5b0d616b4be6a8c841c1c82d4dc5"/>
+    <aggregates rdf:nodeID="Naa013dff2a0749329190cdb421720bdb"/>
+    <aggregates rdf:nodeID="Na55f7e338f1f45fcb1878ce9cbefae6c"/>
+    <aggregates rdf:nodeID="Na1b76d29b50d43f5a6b061dd6d9110e9"/>
+    <aggregates rdf:nodeID="Nb1dfcf4a05b04a6ea89246c4ec622f90"/>
+    <aggregates rdf:nodeID="Nb0f7bfa92b7b4178bb3bef2364e235df"/>
+    <id>/</id>
+    <history>http:/git2prov.org/git2prov?giturl=https:/github.com/baminou/OxoG-Dockstore-Tools.git&amp;serialization=PROV-JSON</history>
+    <aggregates rdf:nodeID="N3549f754e0914b57aacfffa60bf8ee06"/>
+    <aggregates rdf:nodeID="N1adef16055f346b0b12c16eac7440295"/>
+    <aggregates rdf:nodeID="N44272782648c4a9b860eca39de662a49"/>
+    <aggregates rdf:nodeID="N3056f9d9c8a641bc9a2bd0184a910a2a"/>
+    <aggregates rdf:nodeID="Nd1c9679bcf434b65b8930926ae8fa86a"/>
+    <annotations rdf:nodeID="N016c4a3f0bb34d14a2f5638777498db0"/>
+    <aggregates rdf:nodeID="N128b79ec673a42abaa786063df376276"/>
+    <aggregates rdf:nodeID="Nebbd752d0afa4bf7b499d435d7760549"/>
+    <annotations rdf:nodeID="Neff2b32d00ad4bcb80442078a3f3baec"/>
+    <createdOn>2017-10-06T10:13:33.207Z</createdOn>
+    <aggregates rdf:nodeID="N564e6c5f19e24f69b49717b4a8f131e0"/>
+    <aggregates rdf:nodeID="N1333d3c440814f54acaeee70b8bbd46b"/>
+    <authoredBy rdf:nodeID="Ncbf198f703f74d369de97dbc491177c1"/>
+    <aggregates rdf:nodeID="Nc79a6c488a5d4c6eb5a288712a25f844"/>
+    <aggregates rdf:nodeID="N426343c95c3d42259ea47de24bfe4f02"/>
+    <aggregates rdf:nodeID="N77ef98f05df64ed9b9df2bc87861bf85"/>
+    <aggregates rdf:nodeID="N6c603f3abe4d40eaa8369520285232f3"/>
+    <aggregates rdf:nodeID="N5ead41025b6041d098f70fafe49d4075"/>
+    <aggregates rdf:nodeID="N6c6a11fa053a432c86dfed5a611cdc2b"/>
+    <aggregates rdf:nodeID="N1fc9642407e54abc81de8b9fd0f35e5c"/>
+    <aggregates rdf:nodeID="Ndb3a182a16074b70ae6ab102c54f5bd0"/>
+    <rdf:type rdf:resource="https://w3id.org/bundle/context/manifest"/>
+    <aggregates rdf:nodeID="Nb0c756e333234d31824481f9513b5cb2"/>
+    <aggregates rdf:nodeID="N9deab65bc6d546ffaa7c946d02dfc90f"/>
+    <aggregates rdf:nodeID="Ne7450b5e21e547a48361284bd7d3b8fb"/>
+    <aggregates rdf:nodeID="N566bdc55eec4405198c37e8ee451ac46"/>
+    <aggregates rdf:nodeID="N0a03d5e9e031435bb055c3064aa91389"/>
+    <aggregates rdf:nodeID="Na8501453b0b2438aa74794b6a1ba2edf"/>
+    <retrievedOn>2017-10-06T10:13:33.207Z</retrievedOn>
+    <manifest>manifest.json</manifest>
+    <aggregates rdf:nodeID="Nf117f43aeb8d4952bece044e0ba5a81b"/>
+    <aggregates rdf:nodeID="N58664efa7d0946e1a9af89302e0dd831"/>
+    <aggregates rdf:nodeID="Nbbc398cbe071477ba7f9ca7aacf8b7b0"/>
+    <aggregates rdf:nodeID="Na0de494ed96c4edab339519615b2dae5"/>
+    <aggregates rdf:nodeID="N558f3461572e48a5af013b71195905ea"/>
+    <aggregates rdf:nodeID="Ne3484410ca83495eb1d3ba2a7eb48d44"/>
+    <authoredBy rdf:nodeID="Na1acb36b5808437dac094a145952899e"/>
+    <aggregates rdf:nodeID="Nf11c9479f5aa4664a502467721752304"/>
+    <aggregates rdf:nodeID="Nf040c80892a34413ab82c42bc6ee8aa4"/>
+    <aggregates rdf:nodeID="Nfa08f791f50c4aa1b5febfe5da6e8feb"/>
+    <aggregates rdf:nodeID="N5586a27e58fb4fb3bdcebc27a63d0126"/>
+    <aggregates rdf:nodeID="Nbbc3302533434d3886ad45df6a8e2426"/>
+    <createdBy rdf:nodeID="N1b40b3c23c604c2ea19515a901ce1cf6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c603f3abe4d40eaa8369520285232f3">
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/preprocess_vcf.cwl</retrievedFrom>
+    <createdOn>2017-10-06T10:13:33.554Z</createdOn>
+    <uri>/workflow/preprocess_vcf.cwl</uri>
+    <bundledAs rdf:nodeID="N6d82147898834c2e86985e772879c47d"/>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <retrievedBy rdf:nodeID="N3fc385a7f8994b88af2b8ad359a73b6e"/>
+    <mediatype>text/x-yaml</mediatype>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne1404285370f443db4f76b43ca59a293">
+    <folder>/workflow/scripts/</folder>
+    <uri>urn:uuid:f977329e-b028-4865-8792-8cb84da84e47</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0f75453d07504d8cb0ff8558b957e675">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na55f7e338f1f45fcb1878ce9cbefae6c">
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/clean_vcf.sh</retrievedFrom>
+    <retrievedBy rdf:nodeID="N97a7db3e044d4857829aea59d8ba2b47"/>
+    <createdOn>2017-10-06T10:13:33.335Z</createdOn>
+    <uri>/workflow/scripts/clean_vcf.sh</uri>
+    <authoredBy rdf:nodeID="Na2b08f898bd940dca4e3b2a1a9335d8b"/>
+    <mediatype>application/octet-stream</mediatype>
+    <bundledAs rdf:nodeID="Ne290fc60f87f4c9fb85cc53c7b73233a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6a848c41bc0e4d87865b4c8f8b31d54b">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0a03d5e9e031435bb055c3064aa91389">
+    <createdOn>2017-10-06T10:13:33.514Z</createdOn>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_varbam_annotate_util.js</retrievedFrom>
+    <retrievedBy rdf:nodeID="Nf9755fe9b5e6425ab3f9f46c291bb552"/>
+    <mediatype>application/octet-stream</mediatype>
+    <bundledAs rdf:nodeID="N735abac13b76472fa2e56f8e9ccc8653"/>
+    <uri>/workflow/oxog_varbam_annotate_util.js</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7d07b6e820f1449b86b408d9165ca755">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N564e6c5f19e24f69b49717b4a8f131e0">
+    <createdOn>2017-10-06T10:13:33.477Z</createdOn>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <bundledAs rdf:nodeID="N49821999526a44528cf48dc9fd1c3de2"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/annotator_sub_wf.cwl</retrievedFrom>
+    <uri>/workflow/annotator_sub_wf.cwl</uri>
+    <retrievedBy rdf:nodeID="N7d07b6e820f1449b86b408d9165ca755"/>
+    <mediatype>text/x-yaml</mediatype>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0bfbf49d27d548c7b5cef692b0eeeaee">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na8501453b0b2438aa74794b6a1ba2edf">
+    <createdOn>2017-10-06T10:13:33.629Z</createdOn>
+    <mediatype>image/svg+xml</mediatype>
+    <bundledAs rdf:nodeID="N6ac53aef45a749fcb9977d00f8bdd3d3"/>
+    <uri>/visualisation.svg</uri>
+    <retrievedFrom>https://view.commonwl.org/graph/svg/github.com/baminou/OxoG-Dockstore-Tools/blob/develop/oxog_sub_wf.cwl</retrievedFrom>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd48873fcc4144cc6bd58091517a4e49b">
+    <folder>/workflow/sga-annotate-docker/</folder>
+    <uri>urn:uuid:a9b00376-a1bc-4d47-aa73-c6d05c5e9032</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne3f2ae1c8b9e4801902c4c9fdbea4efc">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfaf3d9fb0bd14166b39092062d5124ba">
+    <folder>/workflow/oxog_tool_dockerfile/</folder>
+    <uri>urn:uuid:89b1cbe4-21b4-4c9d-a542-5c1e44b3ab03</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3549f754e0914b57aacfffa60bf8ee06">
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/minibam_sub_wf.cwl</retrievedFrom>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <bundledAs rdf:nodeID="N58f2fe302d6846fb992d38edfce9aa78"/>
+    <uri>/workflow/minibam_sub_wf.cwl</uri>
+    <mediatype>text/x-yaml</mediatype>
+    <retrievedBy rdf:nodeID="N2073cd6334324959a1187026bfbc1eaf"/>
+    <createdOn>2017-10-06T10:13:33.541Z</createdOn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1fc9642407e54abc81de8b9fd0f35e5c">
+    <retrievedBy rdf:nodeID="N1da5063e317b464d977e64757a7fbb23"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_tool_dockerfile/Dockerfile</retrievedFrom>
+    <mediatype>application/octet-stream</mediatype>
+    <createdOn>2017-10-06T10:13:33.384Z</createdOn>
+    <uri>/workflow/oxog_tool_dockerfile/Dockerfile</uri>
+    <authoredBy rdf:nodeID="N7f715b6f67044b978fa3f5465d4f9a9d"/>
+    <bundledAs rdf:nodeID="Nfaf3d9fb0bd14166b39092062d5124ba"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N566bdc55eec4405198c37e8ee451ac46">
+    <mediatype>application/octet-stream</mediatype>
+    <uri>/workflow/Variantbam-for-dockstore/run_variant_bam.sh</uri>
+    <createdOn>2017-10-06T10:13:33.419Z</createdOn>
+    <retrievedBy rdf:nodeID="N0f75453d07504d8cb0ff8558b957e675"/>
+    <bundledAs rdf:nodeID="N3008caf4c69b4282a0c5fd06365e6051"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/run_variant_bam.sh</retrievedFrom>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2f6c76a12ad7407dabf7a57ea793fd64">
+    <folder>/workflow/scripts/</folder>
+    <uri>urn:uuid:30e8f070-4af8-4148-9206-266a65adb5f4</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N48ce6a35633f42caa2976d3ac0ad5181">
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+    <name>SolomonShorser-OICR</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1333d3c440814f54acaeee70b8bbd46b">
+    <bundledAs rdf:nodeID="Ncacf92055f6a41c2a5e67b2d9285de48"/>
+    <retrievedBy rdf:nodeID="Ne7e549ed363243fa9e75d7d28345e5cf"/>
+    <uri>/workflow/TumourType.yaml</uri>
+    <createdOn>2017-10-06T10:13:33.391Z</createdOn>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/TumourType.yaml</retrievedFrom>
+    <mediatype>application/octet-stream</mediatype>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb1dfcf4a05b04a6ea89246c4ec622f90">
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/preprocess_util.js</retrievedFrom>
+    <retrievedBy rdf:nodeID="N914900c349ee4326aa4ed7066026a77c"/>
+    <bundledAs rdf:nodeID="Nedf46a1837254ab3b12479034f38fb63"/>
+    <mediatype>application/octet-stream</mediatype>
+    <createdOn>2017-10-06T10:13:33.488Z</createdOn>
+    <uri>/workflow/preprocess_util.js</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1e19869905614f109bfa48de5433e203">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N77ef98f05df64ed9b9df2bc87861bf85">
+    <authoredBy rdf:nodeID="N62cac12e34984a4f9e3ef8b8e54e785c"/>
+    <bundledAs rdf:nodeID="Ncae99f04faa1430ca3db7ef6e406932c"/>
+    <mediatype>application/octet-stream</mediatype>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/normalize.sh</retrievedFrom>
+    <retrievedBy rdf:nodeID="N901710ffac174f8a954e56224871959e"/>
+    <createdOn>2017-10-06T10:13:33.345Z</createdOn>
+    <uri>/workflow/scripts/normalize.sh</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf117f43aeb8d4952bece044e0ba5a81b">
+    <uri>/workflow/oxog_varbam_annotate_wf.cwl</uri>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_varbam_annotate_wf.cwl</retrievedFrom>
+    <retrievedBy rdf:nodeID="Ncd597791d9ff4439beb6a4935e642926"/>
+    <mediatype>text/x-yaml</mediatype>
+    <createdOn>2017-10-06T10:13:33.53Z</createdOn>
+    <bundledAs rdf:nodeID="N1959f78f1d4a4385a0c6ada7e50c49ae"/>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd1c9679bcf434b65b8930926ae8fa86a">
+    <retrievedBy rdf:nodeID="N0bfbf49d27d548c7b5cef692b0eeeaee"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/annotate_from_readcounts.py</retrievedFrom>
+    <uri>/workflow/sga-annotate-docker/annotate_from_readcounts.py</uri>
+    <bundledAs rdf:nodeID="Na83ca02000dc4216abee5ca0e926743e"/>
+    <mediatype>application/octet-stream</mediatype>
+    <createdOn>2017-10-06T10:13:33.454Z</createdOn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc838f4f6096b41d88d8d2306973393f3">
+    <uri>urn:uuid:9f1b17a2-b422-4927-b29c-e9db0c3a4d9b</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na83ca02000dc4216abee5ca0e926743e">
+    <folder>/workflow/sga-annotate-docker/</folder>
+    <uri>urn:uuid:4298e2cf-cf48-4137-b727-15ab025c1eb0</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N983c767606a943c6ba49b917674db9b0">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncf3ba085694d4d7cabf59252dcde1c57">
+    <uri>urn:uuid:2b79a2d3-2b89-4c96-b345-483fc4203dcf</uri>
+    <folder>/workflow/sga-annotate-docker/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N087bd8fad4b54e8b88b11cd303ed686b">
+    <uri>urn:uuid:1644e529-7b4b-4ea4-ae32-fedcb6823d71</uri>
+    <folder>/workflow/sga-annotate-docker/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na5f82b9e2a4b44c2a8494af70d9c6e6c">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nebbd752d0afa4bf7b499d435d7760549">
+    <bundledAs rdf:nodeID="N9ea8912043634f3198e77fa50e44629f"/>
+    <mediatype>text/x-yaml</mediatype>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/extract_snv.cwl</retrievedFrom>
+    <createdOn>2017-10-06T10:13:33.515Z</createdOn>
+    <uri>/workflow/extract_snv.cwl</uri>
+    <retrievedBy rdf:nodeID="Ne9e862fc44664c26925807d511cbcded"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7b8a477e2cb94bbcaacd141ace36e747">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf11c9479f5aa4664a502467721752304">
+    <uri>/workflow/.gitignore</uri>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/.gitignore</retrievedFrom>
+    <bundledAs rdf:nodeID="Ne78f5eafaad6422fb5dd3f9795573eb5"/>
+    <createdOn>2017-10-06T10:13:33.527Z</createdOn>
+    <retrievedBy rdf:nodeID="Ncc48886535b949bb95c894e132ad1f03"/>
+    <mediatype>application/octet-stream</mediatype>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbd5e5b0d616b4be6a8c841c1c82d4dc5">
+    <uri>/workflow/oxog_tool_dockerfile/run_oxog_tool.py</uri>
+    <retrievedBy rdf:nodeID="N98b92a4d1c584a42943656373b0ccd81"/>
+    <bundledAs rdf:nodeID="N132ef4c3db674b97bccfc476624dfb6a"/>
+    <createdOn>2017-10-06T10:13:33.388Z</createdOn>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_tool_dockerfile/run_oxog_tool.py</retrievedFrom>
+    <mediatype>application/octet-stream</mediatype>
+    <authoredBy rdf:nodeID="N48ce6a35633f42caa2976d3ac0ad5181"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb0f7bfa92b7b4178bb3bef2364e235df">
+    <uri>/workflow/README.md</uri>
+    <retrievedBy rdf:nodeID="N153006fedf4f473dbb6d9a249f147567"/>
+    <mediatype>application/octet-stream</mediatype>
+    <bundledAs rdf:nodeID="Na159c92955ce4283886f18c1c8ad397f"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/README.md</retrievedFrom>
+    <createdOn>2017-10-06T10:13:33.528Z</createdOn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1adef16055f346b0b12c16eac7440295">
+    <bundledAs rdf:nodeID="N5cb31df317554137a9fe82f7eaff3221"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_sub_wf.cwl</retrievedFrom>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <createdOn>2017-10-06T10:13:33.491Z</createdOn>
+    <mediatype>text/x-yaml</mediatype>
+    <retrievedBy rdf:nodeID="Ne9100acb2017414fb06d362f7284bb53"/>
+    <uri>/workflow/oxog_sub_wf.cwl</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3904a142d68e4969b5df1a5c5c917439">
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/sample.json</retrievedFrom>
+    <retrievedBy rdf:nodeID="N96ca7676bc914e10b7f38899b740b880"/>
+    <uri>/workflow/sga-annotate-docker/sample.json</uri>
+    <createdOn>2017-10-06T10:13:33.45Z</createdOn>
+    <mediatype>application/json</mediatype>
+    <bundledAs rdf:nodeID="N9478ad3b2b4b40c19721a72a4b4f028c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N426343c95c3d42259ea47de24bfe4f02">
+    <mediatype>application/octet-stream</mediatype>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/Dockerfile</retrievedFrom>
+    <bundledAs rdf:nodeID="N0ed71fd0444d4df9aa77a81efa769e1c"/>
+    <retrievedBy rdf:nodeID="N6a848c41bc0e4d87865b4c8f8b31d54b"/>
+    <createdOn>2017-10-06T10:13:33.447Z</createdOn>
+    <uri>/workflow/sga-annotate-docker/Dockerfile</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncbf198f703f74d369de97dbc491177c1">
+    <name>Solomon Shorser</name>
+    <uri>mailto:Solomon.Shorser@oicr.on.ca</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na159c92955ce4283886f18c1c8ad397f">
+    <uri>urn:uuid:5e8ad8cd-c61a-42ba-ba43-9e003c8cc39c</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N385e510d0efe49ff89545915cbc7d7db">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na3783a083ffd4e27beb67abf853c44ce">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbbc398cbe071477ba7f9ca7aacf8b7b0">
+    <uri>/workflow/clean_vcf.cwl</uri>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/clean_vcf.cwl</retrievedFrom>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <bundledAs rdf:nodeID="Nc838f4f6096b41d88d8d2306973393f3"/>
+    <retrievedBy rdf:nodeID="Nc60dbc3d5c874cf7a5b60e48bc48044b"/>
+    <mediatype>text/x-yaml</mediatype>
+    <createdOn>2017-10-06T10:13:33.36Z</createdOn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N914900c349ee4326aa4ed7066026a77c">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N957caeab32144621971853d0f9eed7bf">
+    <uri>urn:uuid:842100d5-fa54-4427-ae0d-952502261a2d</uri>
+    <folder>/workflow/oxog_tool_dockerfile/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N307fea42fa964c548b06403dc4e6b2f7">
+    <retrievedBy rdf:nodeID="N1e19869905614f109bfa48de5433e203"/>
+    <bundledAs rdf:nodeID="N6713777d06fe4c16895a4cef811baa64"/>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/Dockstore.cwl</retrievedFrom>
+    <createdOn>2017-10-06T10:13:33.46Z</createdOn>
+    <mediatype>text/x-yaml</mediatype>
+    <uri>/workflow/sga-annotate-docker/Dockstore.cwl</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4afb56fd9e29488c983b101cffbdce9d">
+    <folder>/workflow/Variantbam-for-dockstore/</folder>
+    <uri>urn:uuid:5e6cfd82-2816-4d02-94bd-d3bfb3d6d6a1</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N98b92a4d1c584a42943656373b0ccd81">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N16997e23452844b48b32307d03ad2720">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf040c80892a34413ab82c42bc6ee8aa4">
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <createdOn>2017-10-06T10:13:33.502Z</createdOn>
+    <bundledAs rdf:nodeID="N8eefa03fd2d64a84be70f6e1cd2be21b"/>
+    <uri>/workflow/oxog.cwl</uri>
+    <mediatype>text/x-yaml</mediatype>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog.cwl</retrievedFrom>
+    <retrievedBy rdf:nodeID="N7b8a477e2cb94bbcaacd141ace36e747"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9c613a60f2294487946acb80804b31e1">
+    <folder>/workflow/scripts/</folder>
+    <uri>urn:uuid:cabea5ab-0954-423f-b0fd-9d31da313148</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5cb31df317554137a9fe82f7eaff3221">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:d9b437d1-8f7a-4fab-847f-78ce1f759220</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd2bb243a65584522ae5703c7942becc6">
+    <uri>/workflow/scripts/check_minibams.sh</uri>
+    <retrievedBy rdf:nodeID="N803abd3b83354eb08225603d62f50bbc"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/check_minibams.sh</retrievedFrom>
+    <createdOn>2017-10-06T10:13:33.342Z</createdOn>
+    <authoredBy rdf:nodeID="Nce72bade515340aba50f766f6d34e528"/>
+    <bundledAs rdf:nodeID="N9c613a60f2294487946acb80804b31e1"/>
+    <mediatype>application/octet-stream</mediatype>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N569f5a20ad514c41bc7bbd1027ec3ae7">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N558f3461572e48a5af013b71195905ea">
+    <uri>/workflow/zip_and_index_vcf.cwl</uri>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/zip_and_index_vcf.cwl</retrievedFrom>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <mediatype>text/x-yaml</mediatype>
+    <retrievedBy rdf:nodeID="Na5f82b9e2a4b44c2a8494af70d9c6e6c"/>
+    <bundledAs rdf:nodeID="Ne13c21140e634fbab75a4bd0147f95b7"/>
+    <createdOn>2017-10-06T10:13:33.433Z</createdOn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N58664efa7d0946e1a9af89302e0dd831">
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/normalize.cwl</retrievedFrom>
+    <uri>/workflow/normalize.cwl</uri>
+    <mediatype>text/x-yaml</mediatype>
+    <retrievedBy rdf:nodeID="Na3783a083ffd4e27beb67abf853c44ce"/>
+    <bundledAs rdf:nodeID="N19ed8e9acef84cdcb5406a9549752478"/>
+    <createdOn>2017-10-06T10:13:33.349Z</createdOn>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N44272782648c4a9b860eca39de662a49">
+    <bundledAs rdf:nodeID="Ne81a2404243c4ac6bae3b71932743f6c"/>
+    <retrievedBy rdf:nodeID="N385e510d0efe49ff89545915cbc7d7db"/>
+    <uri>/workflow/.dockerignore</uri>
+    <createdOn>2017-10-06T10:13:33.318Z</createdOn>
+    <mediatype>application/octet-stream</mediatype>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/.dockerignore</retrievedFrom>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naa013dff2a0749329190cdb421720bdb">
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/snv.header</retrievedFrom>
+    <mediatype>application/octet-stream</mediatype>
+    <createdOn>2017-10-06T10:13:33.456Z</createdOn>
+    <bundledAs rdf:nodeID="Nd48873fcc4144cc6bd58091517a4e49b"/>
+    <retrievedBy rdf:nodeID="Nc6313f01791d476098d917666f7bde40"/>
+    <uri>/workflow/sga-annotate-docker/snv.header</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N210b54b7f0524159ac4c587946f7c212">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf5221ed4625f49c9b05d9a4085d88e43">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N803abd3b83354eb08225603d62f50bbc">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N927e9f9152914245b4f9d96041ac5dae">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c6a11fa053a432c86dfed5a611cdc2b">
+    <uri>/workflow/Variantbam-for-dockstore/variantbam.cwl</uri>
+    <bundledAs rdf:nodeID="N9d7ff2214869498fa9dc32bc7890467b"/>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <createdOn>2017-10-06T10:13:33.408Z</createdOn>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/variantbam.cwl</retrievedFrom>
+    <retrievedBy rdf:nodeID="N569f5a20ad514c41bc7bbd1027ec3ae7"/>
+    <mediatype>text/x-yaml</mediatype>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9d225f843c36493db6151bed9ea9d03b">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f715b6f67044b978fa3f5465d4f9a9d">
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+    <name>SolomonShorser-OICR</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3fc385a7f8994b88af2b8ad359a73b6e">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na1acb36b5808437dac094a145952899e">
+    <name>SolomonShorser-OICR</name>
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne9e862fc44664c26925807d511cbcded">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N63cedef3f2794d1e93a809783710689f">
+    <uri>urn:uuid:0407b2ab-6449-48a1-90d9-b23bbdf66ac8</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0a5d765a00f04da8981059484b516dd6">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9d7ff2214869498fa9dc32bc7890467b">
+    <folder>/workflow/Variantbam-for-dockstore/</folder>
+    <uri>urn:uuid:d3e6478a-4ca0-46da-b593-8e51c991aa43</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2251fed9226e4748af5e19b108b865f2">
+    <createdOn>2017-10-06T10:13:33.34Z</createdOn>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/scripts/extract_snvs_from_indels.sh</retrievedFrom>
+    <retrievedBy rdf:nodeID="Nf5221ed4625f49c9b05d9a4085d88e43"/>
+    <uri>/workflow/scripts/extract_snvs_from_indels.sh</uri>
+    <bundledAs rdf:nodeID="Ne1404285370f443db4f76b43ca59a293"/>
+    <mediatype>application/octet-stream</mediatype>
+    <authoredBy rdf:nodeID="Nbe105f5853f04a38ac97e74bd3939d44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc32bb4cfb6f5482fb1dc9beadd055795">
+    <uri>urn:uuid:c1cd8323-8999-4b65-a71b-4972146e5d15</uri>
+    <folder>/workflow/Variantbam-for-dockstore/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndb3a182a16074b70ae6ab102c54f5bd0">
+    <mediatype>application/octet-stream</mediatype>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/oxog_tool_dockerfile/README.md</retrievedFrom>
+    <bundledAs rdf:nodeID="N957caeab32144621971853d0f9eed7bf"/>
+    <authoredBy rdf:nodeID="Nbbe929da333c44dd8af3cf2a3c7ed1b2"/>
+    <authoredBy rdf:nodeID="Nc481b6f27f9749eca95bca7154a57d54"/>
+    <uri>/workflow/oxog_tool_dockerfile/README.md</uri>
+    <createdOn>2017-10-06T10:13:33.385Z</createdOn>
+    <retrievedBy rdf:nodeID="Nd0c2aa7cc190487b8e22a5ecb0a90243"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N128b79ec673a42abaa786063df376276">
+    <createdOn>2017-10-06T10:13:33.393Z</createdOn>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/qa_check_subwf.cwl</retrievedFrom>
+    <bundledAs rdf:nodeID="N1861435300b84890ba50678bdaf8555f"/>
+    <uri>/workflow/qa_check_subwf.cwl</uri>
+    <mediatype>text/x-yaml</mediatype>
+    <retrievedBy rdf:nodeID="Nbc36fbaaa610418db5454c73931c93ed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na543b69a1d9f4d6da9cb06fc62b2d9d6">
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/vcf_merge.cwl</retrievedFrom>
+    <bundledAs rdf:nodeID="N737227e73eed4106bc713d3d5e7aa4ab"/>
+    <uri>/workflow/vcf_merge.cwl</uri>
+    <createdOn>2017-10-06T10:13:33.324Z</createdOn>
+    <mediatype>text/x-yaml</mediatype>
+    <retrievedBy rdf:nodeID="N91fccdf602e54ef2b8fe67f9e056a286"/>
+    <conformsTo>https://w3id.org/cwl/v1.0</conformsTo>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0e79ea99af204dff8ae0e7eae991a4cb">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nca44f190afb24b5183b970199223a430">
+    <uri>urn:uuid:cbccfd79-1516-4ad6-bb02-037aa0810d2b</uri>
+    <folder>/workflow/scripts/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbc36fbaaa610418db5454c73931c93ed">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb4beb91a7e5f4cb9ac8c9fe2e4ba6870">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N737227e73eed4106bc713d3d5e7aa4ab">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:9ff5a973-a025-4ff4-b481-0640f6d2ad2a</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6ac53aef45a749fcb9977d00f8bdd3d3">
+    <folder>/</folder>
+    <uri>urn:uuid:1a5e3674-a630-49df-b02f-bd0f4e9076a3</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N28cf1740d3544a5aabf8f67ad6ad608e">
+    <mediatype>application/octet-stream</mediatype>
+    <bundledAs rdf:nodeID="Ncf3ba085694d4d7cabf59252dcde1c57"/>
+    <retrievedBy rdf:nodeID="N0a5d765a00f04da8981059484b516dd6"/>
+    <createdOn>2017-10-06T10:13:33.452Z</createdOn>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/snv_annotate.sh</retrievedFrom>
+    <uri>/workflow/sga-annotate-docker/snv_annotate.sh</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c7147df65d0444c885422e26dbd9557">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nedf46a1837254ab3b12479034f38fb63">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:5c62724f-82f7-4fb4-a4c7-49626d7b4dfb</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbafc8349a04d44ec9a99358b0611f6e9">
+    <uri>urn:uuid:7e0ce77e-e4c4-456b-a146-ebbc034c182c</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncfcd5fcc704741a8979a5f57a4e2e2cb">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncd597791d9ff4439beb6a4935e642926">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9478ad3b2b4b40c19721a72a4b4f028c">
+    <folder>/workflow/sga-annotate-docker/</folder>
+    <uri>urn:uuid:1a5774d8-f540-4b03-801d-646146d182f3</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbbe929da333c44dd8af3cf2a3c7ed1b2">
+    <uri>mailto:Solomon.Shorser@oicr.on.ca</uri>
+    <name>Solomon Shorser</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne13c21140e634fbab75a4bd0147f95b7">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:cebab6a1-5d78-4261-bf22-e07dd83d0df2</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0f6866b045c2404dac5d0c5be5de9d2e">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:7bced9f6-8984-407a-a657-485192ba57c5</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5ead41025b6041d098f70fafe49d4075">
+    <uri>/workflow/sga-annotate-docker/annotate.sh</uri>
+    <retrievedBy rdf:nodeID="N210b54b7f0524159ac4c587946f7c212"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/annotate.sh</retrievedFrom>
+    <createdOn>2017-10-06T10:13:33.471Z</createdOn>
+    <mediatype>application/octet-stream</mediatype>
+    <bundledAs rdf:nodeID="Nbffa5cf5ea5a4886a52a663a448b3fab"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncae99f04faa1430ca3db7ef6e406932c">
+    <uri>urn:uuid:eec143a1-fbc1-4a71-95ff-80374eeae4f2</uri>
+    <folder>/workflow/scripts/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5a11aaf0270c4f1ca853ce89e2750cd4">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:ae3e3051-c983-4160-8e56-171c4d010b26</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5586a27e58fb4fb3bdcebc27a63d0126">
+    <uri>/workflow/sga-annotate-docker/indel_annotate.sh</uri>
+    <createdOn>2017-10-06T10:13:33.473Z</createdOn>
+    <retrievedBy rdf:nodeID="Nc9504b8e210a452c864c15285c61f96c"/>
+    <bundledAs rdf:nodeID="N481f9aa1b8c3412fa8f4869c82e8f597"/>
+    <mediatype>application/octet-stream</mediatype>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/indel_annotate.sh</retrievedFrom>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncc48886535b949bb95c894e132ad1f03">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N016c4a3f0bb34d14a2f5638777498db0">
+    <about>/</about>
+    <uri>urn:uuid:f15b2ada-efeb-4127-98cd-c8c175c2317f</uri>
+    <content>annotations/merged.cwl</content>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6713777d06fe4c16895a4cef811baa64">
+    <folder>/workflow/sga-annotate-docker/</folder>
+    <uri>urn:uuid:4a9a7318-aa93-468f-973a-3d8cee7dc9ec</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1861435300b84890ba50678bdaf8555f">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:49180f09-ae9b-4e7b-90c3-d5e0985d0661</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf9755fe9b5e6425ab3f9f46c291bb552">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8eefa03fd2d64a84be70f6e1cd2be21b">
+    <uri>urn:uuid:3f642321-f74b-4a6c-ac1e-9d9174b7c78c</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne7450b5e21e547a48361284bd7d3b8fb">
+    <mediatype>application/json</mediatype>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/Variantbam-for-dockstore/sample_input.json</retrievedFrom>
+    <bundledAs rdf:nodeID="N4afb56fd9e29488c983b101cffbdce9d"/>
+    <createdOn>2017-10-06T10:13:33.404Z</createdOn>
+    <retrievedBy rdf:nodeID="N927e9f9152914245b4f9d96041ac5dae"/>
+    <uri>/workflow/Variantbam-for-dockstore/sample_input.json</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc481b6f27f9749eca95bca7154a57d54">
+    <name>SolomonShorser-OICR</name>
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne78f5eafaad6422fb5dd3f9795573eb5">
+    <uri>urn:uuid:ea75393f-6605-4572-9126-b55e85fe0b92</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc6313f01791d476098d917666f7bde40">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N62cac12e34984a4f9e3ef8b8e54e785c">
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+    <name>SolomonShorser-OICR</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3008caf4c69b4282a0c5fd06365e6051">
+    <folder>/workflow/Variantbam-for-dockstore/</folder>
+    <uri>urn:uuid:1db84ade-d891-4b1d-9df1-21ce8bca87cb</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne7e549ed363243fa9e75d7d28345e5cf">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N366e0c9fd1274c18ae05587682bdbdaf">
+    <uri>urn:uuid:2503af3f-aa4e-4861-ae8d-70a1285616f6</uri>
+    <folder>/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N58f2fe302d6846fb992d38edfce9aa78">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:f06868ca-6766-4317-a8ba-cb9298404090</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d82147898834c2e86985e772879c47d">
+    <uri>urn:uuid:d0b0951e-d21c-47b9-9b7f-bf919250f44f</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N735abac13b76472fa2e56f8e9ccc8653">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:bd24281d-7013-4216-b40f-ce003f4a9ed1</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbbc3302533434d3886ad45df6a8e2426">
+    <bundledAs rdf:nodeID="N087bd8fad4b54e8b88b11cd303ed686b"/>
+    <retrievedFrom>https://raw.githubusercontent.com/baminou/OxoG-Dockstore-Tools/develop/sga-annotate-docker/indel.header</retrievedFrom>
+    <uri>/workflow/sga-annotate-docker/indel.header</uri>
+    <mediatype>application/octet-stream</mediatype>
+    <retrievedBy rdf:nodeID="Na7622cd4ba404455ae49f56107b69d9c"/>
+    <createdOn>2017-10-06T10:13:33.458Z</createdOn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N410f4030cc544512af69b9ca619cb685">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:28e9f8e7-2557-41b8-99de-27fdfad0626c</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9ea8912043634f3198e77fa50e44629f">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:58649221-8065-4f1b-b96c-f7f05346e9b6</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N96ca7676bc914e10b7f38899b740b880">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc9504b8e210a452c864c15285c61f96c">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbe105f5853f04a38ac97e74bd3939d44">
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+    <name>SolomonShorser-OICR</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne81a2404243c4ac6bae3b71932743f6c">
+    <uri>urn:uuid:262b888e-fd91-4fed-b406-23a7f95ae967</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N991294b471ee408f86f64d70c5661a8c">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N23e69a533d7c4803849736daefc3f26b">
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+    <name>SolomonShorser-OICR</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne9100acb2017414fb06d362f7284bb53">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncacf92055f6a41c2a5e67b2d9285de48">
+    <uri>urn:uuid:f6b39286-a7b6-4b52-8f38-fccd8bfa0e6b</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2073cd6334324959a1187026bfbc1eaf">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd0c2aa7cc190487b8e22a5ecb0a90243">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1b40b3c23c604c2ea19515a901ce1cf6">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1da5063e317b464d977e64757a7fbb23">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc60dbc3d5c874cf7a5b60e48bc48044b">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N19ed8e9acef84cdcb5406a9549752478">
+    <uri>urn:uuid:0a33ba29-b096-4226-8dfd-6db695bf5cd2</uri>
+    <folder>/workflow/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1959f78f1d4a4385a0c6ada7e50c49ae">
+    <folder>/workflow/</folder>
+    <uri>urn:uuid:b766bcd4-8428-4f75-b3c6-9999669d39ed</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0ed71fd0444d4df9aa77a81efa769e1c">
+    <uri>urn:uuid:469c2d63-41f3-4eb1-933b-3419f8d73ff0</uri>
+    <folder>/workflow/sga-annotate-docker/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N901710ffac174f8a954e56224871959e">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N481f9aa1b8c3412fa8f4869c82e8f597">
+    <uri>urn:uuid:34be45b7-d972-4321-bab7-2a6db74a0e0c</uri>
+    <folder>/workflow/sga-annotate-docker/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N153006fedf4f473dbb6d9a249f147567">
+    <uri>https://view.commonwl.org</uri>
+    <name>Common Workflow Language Viewer</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na2b08f898bd940dca4e3b2a1a9335d8b">
+    <uri>mailto:solomon.shorser@oicr.on.ca</uri>
+    <name>SolomonShorser-OICR</name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbffa5cf5ea5a4886a52a663a448b3fab">
+    <uri>urn:uuid:96f2de29-719c-4463-b80c-36b36f01aac6</uri>
+    <folder>/workflow/sga-annotate-docker/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0bce9dc9ef8b42a4824ed1d413cbbdaf">
+    <uri>urn:uuid:7a102ddf-3796-4555-8b6a-99220997c3d4</uri>
+    <folder>/workflow/Variantbam-for-dockstore/</folder>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc2ef9d485acf43d3af1d1740af6e3597">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N132ef4c3db674b97bccfc476624dfb6a">
+    <folder>/workflow/oxog_tool_dockerfile/</folder>
+    <uri>urn:uuid:07d61244-fa68-4e9b-a22c-15dcfa72c0c7</uri>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na7622cd4ba404455ae49f56107b69d9c">
+    <name>Common Workflow Language Viewer</name>
+    <uri>https://view.commonwl.org</uri>
+  </rdf:Description>
+</rdf:RDF>
