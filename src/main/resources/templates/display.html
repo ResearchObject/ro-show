@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css" media="screen"/>
     <link href="../static/css/footer-fixed-bottom.css" th:href="@{css/footer-fixed-bottom.css}" rel="stylesheet" media="screen"/>
-    <link href="../static/css/main.css" th:href="@{css/main.css}" rel="stylesheet" media="screen"/>
+    <link href="../static/css/page.css" th:href="@{css/page.css}" rel="stylesheet" media="screen"/>
     <link href="../static/css/diagnostics.css" th:href="@{css/diagnostics.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
@@ -27,9 +27,15 @@
         </div>
         <div class="panel panel-default panel-body">
             <div th:if="${validation_result == true}">
-                <h2 style="text-align: center; color: green">
+                <h2 class="green-icon center-text">
                     <i class="glyphicon glyphicon-ok-sign"></i>PASSED MANIFEST VALIDATION<i class="glyphicon glyphicon-ok-sign"></i>
                 </h2>
+                <h4><b>validated against the following shapes:</b></h4>
+                <h4>workflow-model:</h4>
+                <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>provenance-shape.ttl</p>
+                <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>aggregate-shape.ttl</p>
+                <h4>basic-model:</h4>
+                <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>annotation-shape.ttl</p>
             </div>
             <div th:if="${validation_result == false}">
                 <h2 style="text-align: center; color: red">
@@ -53,13 +59,21 @@
             <div class="panel-body">
                 <div class="tabbable">
                     <ul class="nav nav-pills">
-                        <li class="active"><a href="#tab1" data-toggle="tab">provenance</a></li>
-                        <li><a href="#tab2" data-toggle="tab">aggregates</a></li>
-                        <li><a href="#tab3" data-toggle="tab">annotations</a></li>
-                        <li><a href="#tab4" data-toggle="tab">info</a></li>
+                        <li class="active"><a href="#tab1" data-toggle="tab">info</a></li>
+                        <li><a href="#tab2" data-toggle="tab">provenance</a></li>
+                        <li><a href="#tab3" data-toggle="tab">aggregates</a></li>
+                        <li><a href="#tab4" data-toggle="tab">annotations</a></li>
                     </ul>
                     <div class="tab-content fixed-panel xy-padding">
                         <div class="tab-pane active" id="tab1">
+                            <h4><b>context</b></h4>
+                            <p th:text="${manifest.getContext()}"></p>
+                            <hr/>
+                            <h4><b>creator</b></h4>
+                            <p th:text="${manifest.getCreatedBy()}"></p>
+                        </div>
+
+                        <div class="tab-pane" id="tab2">
                             <h4><b>authors</b></h4>
                             <ul class="list-unstyled">
                                 <li th:each="author : ${manifest.getAuthors()}">
@@ -74,7 +88,7 @@
                             <p th:text="${manifest.getHistory()}"></p>
                         </div>
 
-                        <div class="tab-pane" id="tab2">
+                        <div class="tab-pane" id="tab3">
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead class="thead-inverse">
@@ -97,7 +111,7 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane" id="tab3">
+                        <div class="tab-pane" id="tab4">
                             <ul class="list-unstyled">
                                 <li th:each="annotation : ${manifest.getAnnotations()}">
                                     <p th:text="${annotation}"></p>
@@ -105,11 +119,6 @@
                             </ul>
                         </div>
 
-                        <div class="tab-pane" id="tab4">
-                            <h4><b>context</b></h4>
-                            <p th:text="${manifest.getContext()}"></p>
-                            <hr/>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -123,7 +132,9 @@
             <h2 class="gutter">profile</h2>
             <div class="panel panel-default ">
                 <div class="panel-body">
-                    <p><strong>[under development!!!]</strong></p>
+                    <p><strong th:text="${manifest.getProfile()}"></strong></p>
+                    <p th:if="${manifest.getProfile() == 'Workflow-centric Research Object'}">Validated against workflow shape-graph model</p>
+                    <p><i>[other profile specific info to be included in future releases!!!]</i></p>
                 </div>
             </div>
         </div>
@@ -132,7 +143,7 @@
             <h2 class="gutter">structure</h2>
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <p><strong>[under development!!!]</strong></p>
+                    <p><i>[under development!!!]</i></p>
                 </div>
             </div>
         </div>

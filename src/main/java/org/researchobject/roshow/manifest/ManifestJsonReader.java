@@ -15,6 +15,7 @@ import org.json.simple.parser.ParseException;
 public class ManifestJsonReader {
 
     private JSONObject jsonObject;
+    private ManifestFile manifest = new ManifestFile();
 
     public ManifestJsonReader(File file) throws IOException, ParseException {
         JSONParser jsonParser = new JSONParser();
@@ -24,9 +25,7 @@ public class ManifestJsonReader {
 
     public ManifestFile getManifest(String name) {
 
-        ManifestFile manifest = new ManifestFile();
         manifest.setBundle_name(name);
-
         manifest.setContext(this.getContext());
         manifest.setCreatedOn(this.getDateCreated());
         manifest.setCreatedBy(this.getViewer());
@@ -81,12 +80,7 @@ public class ManifestJsonReader {
     }
 
     private String getViewer() {
-        String roProfile = " ";
-        String recommendedViewer = getAttributeValue("name", getAttributeObject("createdBy", jsonObject));
-        if(recommendedViewer.equals("Common Workflow Language Viewer")) {
-            roProfile += "Workflow Research Object";
-        }
-        return roProfile + " (can be viewed by " + recommendedViewer + ")";
+        return getAttributeValue("name", getAttributeObject("createdBy", jsonObject));
     }
 
     public List<String> getAuthors() {
@@ -137,9 +131,16 @@ public class ManifestJsonReader {
 
     public List<String> getAnnotations() {
         List<String> annotations = new ArrayList<>();
+        String annotation_content = "";
         for(Object annotation : getJsonArray("annotations", jsonObject))
         {
-            annotations.add(getAttributeValue("content", (JSONObject) annotation));
+            annotation_content = getAttributeValue("content", (JSONObject) annotation);
+            if (getAttributeValue("about", (JSONObject) annotation).equals("/")){
+                annotations.add(annotation_content + " contains additional annotations about " + manifest.getBundle_name() );
+            } else {
+                annotations.add(annotation_content + " contains additional annotations about " +
+                        getAttributeValue("about", (JSONObject) annotation));
+            }
         }
         return annotations;
     }

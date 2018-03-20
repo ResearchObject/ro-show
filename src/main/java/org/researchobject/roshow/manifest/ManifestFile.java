@@ -16,8 +16,17 @@ public class ManifestFile {
     private List<Aggregate> aggregates = Collections.singletonList(new Aggregate());
     private List<String> annotations = Collections.singletonList(getBundle_name() + " contains no additional annotation");
     private String bundle_name = "null";
+    private String profile = "null";
 
     ManifestFile() { }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
+    }
 
     public String getBundle_name() {
         return bundle_name;
@@ -41,6 +50,10 @@ public class ManifestFile {
 
     public void setCreatedBy(String createdBy) {
         this.createdBy = createdBy;
+        if(createdBy.equals("Common Workflow Language Viewer")) {
+            this.createdBy = getBundle_name() + " was created by " + createdBy;
+            this.profile = "Workflow-centric Research Object";
+        }
     }
 
     public String getCreatedOn() {
@@ -81,6 +94,9 @@ public class ManifestFile {
 
     public void setRetrievedBy(String retrievedBy) {
         this.retrievedBy = retrievedBy;
+        if (retrievedBy.equals("https://view.commonwl.org")) {
+            this.profile = "Workflow-centric Research Object";
+        }
     }
 
     public List<String> getHistory() {
