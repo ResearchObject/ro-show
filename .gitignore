@@ -13,3 +13,4 @@ ro-show.iml
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+/src/main/java/org/researchobject/roshow/validation/

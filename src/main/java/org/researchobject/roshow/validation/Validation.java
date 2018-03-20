@@ -20,13 +20,19 @@ public class Validation {
         // Creates a memory Model and Graph and load the associated data and shape graphs
         Model shapeModel = ModelFactory.createModelForGraph(Factory.createDefaultGraph());
         Model dataModel = ModelFactory.createModelForGraph(Factory.createDefaultGraph());
-        shapeModel.read(Validation.class.getResourceAsStream("/shape_graph/aggregate_shape.ttl"), null, FileUtils.langTurtle);
-        dataModel.read(Validation.class.getResourceAsStream("/data_graph/aggregate_data.ttl"), null, FileUtils.langTurtle);
+        shapeModel.read(Validation.class.getResourceAsStream("/shape_graph/provenance_shape.ttl"), null, FileUtils.langTurtle);
+        dataModel.read(Validation.class.getResourceAsStream("/data_graph/manifest.ttl"), null, FileUtils.langTurtle);
 
         // Perform the validation against the data model using the shape model
         Resource report = ValidationUtil.validateModel(dataModel, shapeModel, true);
 
         // Print violations
+        System.out.println(ModelPrinter.get().print(report.getModel()));
+
+
+        shapeModel.read(Validation.class.getResourceAsStream("/shape_graph/aggregate_shape.ttl"), null, FileUtils.langTurtle);
+        dataModel.read(Validation.class.getResourceAsStream("/data_graph/manifest.rdf"), null, FileUtils.langXML);
+        report = ValidationUtil.validateModel(dataModel, shapeModel, true);
         System.out.println(ModelPrinter.get().print(report.getModel()));
     }
 
