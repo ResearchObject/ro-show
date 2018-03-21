@@ -21,6 +21,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -98,6 +101,22 @@ public class RoController {
     public String externalRedirects() {
 
         return "external";
+    }
+
+    @GetMapping("/editor")
+    public String editor(@RequestParam String manifest, Model model) {
+
+        model.addAttribute("manifest", manifest);
+
+        return "editor";
+    }
+
+    @GetMapping("/demo")
+    @ResponseBody
+    public byte [] manifestEditor(@RequestParam String manifest) throws IOException {
+        File file = new File(storageService.load(manifest).toString().concat("/.ro/manifest.json"));
+        Path path = Paths.get(file.getPath());
+        return Files.readAllBytes(path);
     }
 
     @PostMapping("/urlUpload")

@@ -138,17 +138,24 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <h2 class="gutter">structure</h2>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <p><i>[under development!!!]</i></p>
+<div class="container">
+    <div class="row">
+        <h2 class="gutter">manifest specific actions</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" th:src="@{/editor(manifest=${uuid})}"></iframe>
                 </div>
+                <p><button class="btn btn-warning" th:onclick="|window.location.href='/rawManifest?manifest=${uuid}'|">Raw Manifest File</button></p>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="container">
     <div class="row">
