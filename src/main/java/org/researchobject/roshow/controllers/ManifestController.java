@@ -7,6 +7,8 @@ import org.researchobject.roshow.model.UUIDdb;
 import org.researchobject.roshow.repository.UUIDrepository;
 import org.researchobject.roshow.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.ResourceUtils;
@@ -64,6 +66,7 @@ public class ManifestController {
             uuidMap.put(uuiddb.getUuid(), uuiddb.getRoName());
         }
 
+        model.addAttribute("uuid", manifest);
         model.addAttribute("validation_result", validation_result);
         model.addAttribute("previewLink", previewLink);
         model.addAttribute("uuidMap", uuidMap);
@@ -81,13 +84,13 @@ public class ManifestController {
     }
 
     /* backup method that displays the JSON correctly on screen */
-//    @GetMapping("/displayManifest")
-//    public ResponseEntity<byte []> displayManifest(@RequestParam UUID manifest) throws IOException{
-//        File file = new File(storageService.load(manifest.toString()).toString().concat("/.ro/manifest.json"));
-//        return ResponseEntity
-//                .ok()
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .body(Files.readAllBytes(file.toPath()));
-//    }
+    @GetMapping("/rawManifest")
+    public ResponseEntity<byte []> displayManifest(@RequestParam UUID manifest) throws IOException{
+        File file = new File(storageService.load(manifest.toString()).toString().concat("/.ro/manifest.json"));
+        return ResponseEntity
+                .ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(Files.readAllBytes(file.toPath()));
+    }
 
 }

@@ -1,0 +1,95 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/webjars/font-awesome/5.0.6/web-fonts-with-css/css/fontawesome.min.css"/>
+    <link href="../static/css/footer-fixed-bottom.css" th:href="@{css/footer-fixed-bottom.css}" rel="stylesheet" media="screen"/>
+    <link href="../static/css/page.css" th:href="@{css/page.css}" rel="stylesheet" media="screen"/>
+    <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-beta.1/classic/ckeditor.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script></head>
+<body id="bootstrap-overrides">
+
+
+<div>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+
+        var uuid = /*[[${manifest}]]*/ 'Sebastian';
+
+
+        $(document).ready(function() {
+            $('#inputTextToSave').load("../demo?manifest=" + uuid);
+        });
+
+        /*]]>*/
+    </script>
+
+    <table>
+        <tr><td>Manifest File Editor</td></tr>
+        <tr>
+            <td colspan="3">
+                <textarea id="inputTextToSave" cols="138" rows="25"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Filename to Save As:</td>
+            <td align="left"><input id="inputFileNameToSaveAs"/></td>
+            <td align="right"><button class="btn btn-success btn-sm" onclick="saveTextAsFile()">Save Text to File</button></td>
+        </tr>
+        <tr>
+            <td>Select a File to Load:</td>
+            <td align="left"><label class="btn btn-default btn-file">Browse
+                <input type="file" style="display: none;" id="fileToLoad"/></label></td>
+            <td align="right"><button class="btn btn-primary btn-sm" onclick="loadFileAsText()">Load Selected File</button></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+
+        function saveTextAsFile()
+        {
+            var textToSave = document.getElementById("inputTextToSave").value;
+            var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+            var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+            var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+
+            var downloadLink = document.createElement("a");
+            downloadLink.download = fileNameToSaveAs;
+            downloadLink.innerHTML = "Download File";
+            downloadLink.href = textToSaveAsURL;
+            downloadLink.onclick = destroyClickedElement;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+
+            downloadLink.click();
+        }
+
+        function destroyClickedElement(event)
+        {
+            document.body.removeChild(event.target);
+        }
+
+        function loadFileAsText()
+        {
+            var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+            var fileReader = new FileReader();
+            fileReader.onload = function(fileLoadedEvent)
+            {
+                var textFromFileLoaded = fileLoadedEvent.target.result;
+                document.getElementById("inputTextToSave").value = textFromFileLoaded;
+            };
+            fileReader.readAsText(fileToLoad, "UTF-8");
+        }
+
+    </script>
+
+</div>
+
+</body>
+</html>
