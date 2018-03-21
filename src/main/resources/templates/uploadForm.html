@@ -21,15 +21,19 @@
             </div>
         </div>
         <div class="row">
-            <blockquote><p>This is a tool for top level viewing of the resources in a research object and annotations about them. Ro-show is still under development and subject to change without warning!!</p></blockquote>
+            <blockquote><p>This is a tool for viewing and validating the resources in a <a th:href="@{http://www.researchobject.org/}">research object</a> of any profile and displaying the metadata embedded in the manifest. It also allows you to edit the contents of the aggregated files and save your changes locally.</p>
+                <div style="color:red">
+                    <p>Ro-show is still under development and subject to change without warning!!</p>
+                </div>
+            </blockquote>
         </div>
 
         <hr/>
 
         <div class="row">
             <div class="col-md-12">
-                <h2>Upload Research Object From File System</h2>
-                <p>Click the "choose file" button below to select research object bundle to upload from your device file system.
+                <h2>Upload Research Object</h2>
+                <p>Click the "choose file" button below to select <a th:href="@{http://www.researchobject.org/initiative/ro-bundle-zip/}">Research Object bundle</a> to upload from your device file system.
                  Alternatively, you can upload a research object via a persistent link.</p>
                 <div class="alert alert-dark-grey">
                     <strong>Don't have a research object bundle on your device?</strong>
@@ -44,32 +48,37 @@
             <div class="col-sm-6">
                 <form method="POST" enctype="multipart/form-data" action="/">
                     <div class="form-group">
-                        <input type="file" name="file" id="ZipInputFile" placeholder="upload">
+                        <label class="btn btn-default">
+                            <input type="file" name="file" id="ZipInputFile" placeholder="upload" style="display:none">
+                                Choose File
+                            </input>
+                        </label>
                         <p class="help-block">Upload a research object!</p>
-                        </input>
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
-
+            </div>
+            <div class="col-sm-6">
                 <form method="POST" name="url" action="/urlUpload">
                     <div class="form-group">
-                        <input type="text" name="url" placeholder="Download URL">
+                        <input type="text" name="url" placeholder="Bundle download URL" class="form-control">
                         </input>
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
-
-                <strong class="content" th:if="${message}">
-                    <p th:text="${message}"></p>
-                    <hr/>
-                </strong>
             </div>
+        </div>
+        <div class="row">
+            <strong class="center-text" th:if="${message}">
+                <p th:text="${message}"></p>
+                <hr/>
+            </strong>
         </div>
     </div>
 
     <div class="container">
         <ol class="list-unstyled  list-group margin-b-3">
-            <li class="col-sm-4 " th:each="manifest : ${manifestsUuid}">
+            <li class="col-sm-3" th:each="manifest : ${manifestsUuid}">
                 <div class="dash-box dash-box-color-3 margin-lr-2">
                     <div class="dash-box-icon">
                         <i class="glyphicon glyphicon-folder-open"></i>

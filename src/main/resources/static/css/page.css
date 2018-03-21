@@ -12,8 +12,8 @@ body {
 }
 
 .margin-lr-2 {
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .fixed-panel {
@@ -34,7 +34,12 @@ body {
 
 .alert-dark-grey {
     color: #727F8C;
-    background-color: #f8f8f8;
+    background-color: #e6e6e6;
+}
+
+.alert-dark-pink {
+    color: #727F8C;
+    background-color: #ecc6d9;
 }
 
 em .list-group-item {
