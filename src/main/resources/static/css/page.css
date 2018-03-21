@@ -1,5 +1,5 @@
 body {
-    font: 1.5em "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .navbar-nav > li > a {
@@ -29,6 +29,11 @@ body {
 
 .alert-grey {
     color: #7d7d7d;
+    background-color: #f8f8f8;
+}
+
+.alert-dark-grey {
+    color: #727F8C;
     background-color: #f8f8f8;
 }
 
