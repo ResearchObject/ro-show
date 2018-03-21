@@ -146,6 +146,28 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <h2 class="gutter">structure</h2>
+            <div class="panel panel-default ">
+                <div class="panel-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" th:src="@{/roStructure(manifest=${uuid})}"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="gutter">
+            <h2>snapshot</h2>
+            <img th:src="${previewLink}" style='width:100%;' border="0" alt="Null"/>
+        </div>
+        <div class="panel panel-default panel-body">
+        </div>
     </div>
 </div>
 
@@ -164,17 +186,6 @@
     </div>
 </div>
 
-
-<div class="container">
-    <div class="row">
-        <div class="gutter">
-            <h2>preview</h2>
-            <img th:src="${previewLink}" style='width:100%;' border="0" alt="Null"/>
-        </div>
-        <div class="panel panel-default panel-body">
-        </div>
-    </div>
-</div>
 
 <div th:replace="fragments/footer :: copy"></div>
 
