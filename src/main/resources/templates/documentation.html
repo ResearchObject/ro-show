@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/webjars/font-awesome/5.0.6/web-fonts-with-css/css/fontawesome.min.css"/>
+    <link href="../static/css/footer-fixed-bottom.css" th:href="@{css/footer-fixed-bottom.css}" rel="stylesheet" media="screen"/>
+    <link href="../static/css/page.css" th:href="@{css/page.css}" rel="stylesheet" media="screen"/>
+    <link href="../static/css/diagnostics.css" th:href="@{css/diagnostics.css}" rel="stylesheet" media="screen"/>
+</head>
+<body id="bootstrap-overrides">
+
+<nav th:replace="fragments/header :: navbar"></nav>
+
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" role="main" id="main">
+                <h2>Documentation</h2>
+            </div>
+        </div>
+        <div class="row">
+            <blockquote>
+            </blockquote>
+        </div>
+
+        <hr/>
+
+        <div class="row">
+            <div class="col-md-12" role="main" id="main">
+                <h2>FAQ</h2>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div class="row">
+            <div class="col-md-12" role="main" id="main">
+                <h2>Help</h2>
+                <p>If you have any questions, comments or feedback about the application,
+                    feel free to open an issue on our github page at
+                    <bold><a th:href="@{https://github.com/ResearchObject/ro-show/issues}"></a></bold>
+                    or leave us a message on gitterchat <bold><a th:href="@{https://gitter.im/ResearchObject/ro-show}">
+                    </a></bold> </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: copy"></div>
+
+</body>
+</html>

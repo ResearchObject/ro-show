@@ -103,6 +103,12 @@ public class RoController {
         return "external";
     }
 
+    @GetMapping("/documentation")
+    public String apiDoc() {
+
+        return "documentation";
+    }
+
     @GetMapping("/editor")
     public String editor(@RequestParam String manifest, Model model) {
 
