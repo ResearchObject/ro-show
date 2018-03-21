@@ -56,6 +56,10 @@ em .list-group-item {
     color: green;
 }
 
+.red-icon {
+    color: red;
+}
+
 .center-text {
     text-align: center;
 }

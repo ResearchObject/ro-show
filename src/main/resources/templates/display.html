@@ -38,10 +38,18 @@
                 <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>annotation-shape.ttl</p>
             </div>
             <div th:if="${validation_result == false}">
-                <h2 style="text-align: center; color: red">
+                <h2 class="center-text red-icon">
                     <i class="glyphicon glyphicon-remove-sign"></i>FAILED MANIFEST VALIDATION<i class="glyphicon glyphicon-remove-sign"></i>
                 </h2>
-                <p>Value for manifest.json property with path ‘mediatype’ is out of bounds</p>
+                <h4><b>validated against the following shapes:</b></h4>
+                <h4>workflow-model:</h4>
+                <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>provenance-shape.ttl</p>
+                <p><i class="red-icon glyphicon glyphicon-remove-sign"></i>aggregate-shape.ttl</p>
+                <ul>
+                   <li>Value for manifest.json property with path ‘mediatype’ is out of bounds</li>
+                </ul>
+                <h4>basic-model:</h4>
+                <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>annotation-shape.ttl</p>
             </div>
         </div>
     </div>
