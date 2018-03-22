@@ -34,8 +34,8 @@
                 <h4>workflow-model:</h4>
                 <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>provenance-shape.ttl</p>
                 <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>aggregate-shape.ttl</p>
-                <h4>basic-model:</h4>
                 <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>annotation-shape.ttl</p>
+                <h4>basic-model:</h4>
             </div>
             <div th:if="${validation_result == false}">
                 <h2 class="center-text red-icon">
@@ -46,10 +46,10 @@
                 <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>provenance-shape.ttl</p>
                 <p><i class="red-icon glyphicon glyphicon-remove-sign"></i>aggregate-shape.ttl</p>
                 <ul>
-                   <li>Value for manifest.json property with path ‘mediatype’ is out of bounds</li>
+                   <li>Value for manifest.json property with path ‘mediatype’ and value 'img/svg+xml' is invalid. (Should be either img/png or img/jpg)</li>
                 </ul>
-                <h4>basic-model:</h4>
                 <p><i class="green-icon glyphicon glyphicon-ok-sign"></i>annotation-shape.ttl</p>
+                <h4>basic-model:</h4>
             </div>
         </div>
     </div>
